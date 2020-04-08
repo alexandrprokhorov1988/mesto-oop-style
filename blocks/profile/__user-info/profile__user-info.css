@@ -1,0 +1,11 @@
+.profile__user-info {
+  padding-left: 30px;
+  width: 100%;
+}
+
+.profile__user-edit-name{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
