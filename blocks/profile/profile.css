@@ -12,6 +12,8 @@
   width: calc(100% - 22.5%);
   height: 120px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: ;
+  grid-template-columns: 120px 1fr minmax(min-content, 150px);
+  grid-template-rows: 120px;
+  grid-template-areas: "avatar info add";
+  align-items: center;
 }
