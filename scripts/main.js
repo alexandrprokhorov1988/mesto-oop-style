@@ -23,7 +23,7 @@ function formSubmitHandler(event) {
     event.preventDefault();
     nameField.textContent = nameInput.value;
     jobField.textContent = jobInput.value;
-    togglePopup();
+    popup.classList.toggle("popup_opened");
 }
 
 popupEditButton.addEventListener("click", togglePopup);
