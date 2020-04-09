@@ -10,7 +10,7 @@
   padding-top: 40px;
   max-width: 882px;
   width: calc(100% - 22.5%);
-  height: 120px;
+  height: 120px; /*todo*/
   display: grid;
   grid-template-columns: 120px 1fr minmax(min-content, 150px);
   grid-template-rows: 120px;
