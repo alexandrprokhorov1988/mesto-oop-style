@@ -6,9 +6,24 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   outline: none;
   border: 1px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  grid-area: edit;
+}
+
+.profile__edit-button:hover {
+  background-image: url(../../../images/edit-button-icon-gray.svg);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+  }
 }

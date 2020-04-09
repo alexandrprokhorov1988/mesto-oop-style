@@ -1,0 +1,26 @@
+@import url(./__input/form__input.css);
+@import url(./__submit-button/form__submit-button.css);
+@import url(./__title/form__title.css);
+
+.form {
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: calc(100% - 16.75%);
+  height: 100%;
+  padding-bottom: 30px;
+  padding-top: 40px;
+}

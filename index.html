@@ -22,19 +22,30 @@
     </a>
   </header>
   <main class="content">
-
-
     <section class="profile">
       <img src="images/Avatar.jpg" alt="Аватар" class="profile__avatar">
       <div class="profile__user-info">
-        <p class="profile__user-name">Жак-Ив Кусто</p>
-        <button class="profile__edit-button"></button>
+
+        <div class="profile__row">
+          <p class="profile__user-name">Жак-Ив Кусто</p>
+          <button class="profile__edit-button"></button>
+        </div>
+
         <p class="profile__user-profession">Исследователь океана</p>
       </div>
       <button class="profile__add-button"></button>
+      <div class="popup">
+        <div class="popup__container">
+          <div class="popup__close-icon"></div>
+          <h2 class="form__title">Редактировать профиль</h2>
+          <form action="#" class="form" method="get">
+            <input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
+            <input class="form__input" type="text" name="profession" placeholder="Ваша профессия" required>
+            <input class="form__submit-button" type="submit" name="submit" value="Сохранить">
+          </form>
+        </div>
+      </div>
     </section>
-
-
     <section class="elements">
       <div class="elements__element">
         <img class="elements__img" src="images/card1.jpg" alt="Открытая калитка.">
@@ -84,5 +95,6 @@
     <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
   </footer>
 </div>
+<script src="scripts/main.js"></script>
 </body>
 </html>
