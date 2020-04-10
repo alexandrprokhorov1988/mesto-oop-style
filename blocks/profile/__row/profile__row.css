@@ -13,3 +13,9 @@
   -ms-flex-align: baseline;
   align-items: baseline;
 }
+
+@media screen and (max-width: 375px) {
+  .profile__row{
+    max-width: 282px;
+  }
+}

@@ -22,3 +22,9 @@
     padding-top: 0;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .profile__user-profession {
+    max-width: 282px;
+  }
+}
