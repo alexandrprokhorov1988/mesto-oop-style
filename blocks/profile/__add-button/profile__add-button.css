@@ -17,9 +17,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 2px;
-  -webkit-transition: all ease 1s;
-  -o-transition: all ease 1s;
-  transition: all ease 1s;
+  -webkit-transition: max-width ease 1s;
+  -o-transition: max-width ease 1s;
+  transition: max-width ease 1s;
 }
 
 .profile__add-button:hover {

@@ -3,6 +3,7 @@
 @import url(./__like/elements__like.css);
 @import url(./__title/elements__title.css);
 @import url(./__info/elements__info.css);
+@import url(./__high-image/elements__high-image.css);
 
 .elements {
   margin: 0 auto;
