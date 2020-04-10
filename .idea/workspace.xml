@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33cf8236-7f41-4c7d-9a65-7752980a042d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__row/profile__row.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__row/profile__row.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__user-info/profile__user-info.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__user-info/profile__user-info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__user-name/profile__user-name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__user-name/profile__user-name.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__user-profession/profile__user-profession.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__user-profession/profile__user-profession.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/elements/__title/elements__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/elements/__title/elements__title.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,56 +22,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile__row.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blocks/profile/__row/profile__row.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile__user-profession.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blocks/profile/__user-profession/profile__user-profession.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blocks/profile/profile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile__user-info.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blocks/profile/__user-info/profile__user-info.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile__add-button.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile__user-name.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blocks/profile/__user-name/profile__user-name.css">
+      <file leaf-file-name="elements__title.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blocks/elements/__title/elements__title.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -118,7 +67,6 @@
         <option value="$PROJECT_DIR$/blocks/form/__input/form__input.css" />
         <option value="$PROJECT_DIR$/blocks/elements/__element/elements__element.css" />
         <option value="$PROJECT_DIR$/blocks/elements/__info/elements__info.css" />
-        <option value="$PROJECT_DIR$/blocks/elements/__title/elements__title.css" />
         <option value="$PROJECT_DIR$/blocks/form/__submit-button/form__submit-button.css" />
         <option value="$PROJECT_DIR$/blocks/form/__title/form__title.css" />
         <option value="$PROJECT_DIR$/blocks/form/form.css" />
@@ -143,6 +91,7 @@
         <option value="$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css" />
         <option value="$PROJECT_DIR$/blocks/profile/__row/profile__row.css" />
         <option value="$PROJECT_DIR$/blocks/profile/__user-name/profile__user-name.css" />
+        <option value="$PROJECT_DIR$/blocks/elements/__title/elements__title.css" />
       </list>
     </option>
   </component>
@@ -181,6 +130,19 @@
               <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
               <item name="mesto" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mesto" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="elements" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mesto" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="elements" type="462c0819:PsiDirectoryNode" />
+              <item name="__title" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
@@ -279,7 +241,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64106000" />
+    <option name="totallyTimeSpent" value="64422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
@@ -413,13 +375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/elements/__title/elements__title.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -595,31 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/blocks/profile/__user-name/profile__user-name.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/profile/__user-profession/profile__user-profession.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/profile/profile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/profile/__user-info/profile__user-info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        <state relative-caret-position="320">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -630,17 +564,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/profile/__row/profile__row.css">
+    <entry file="file://$PROJECT_DIR$/blocks/profile/__user-info/profile__user-info.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/profile/profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/profile/__user-profession/profile__user-profession.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/profile/__row/profile__row.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
           <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/profile/__user-name/profile__user-name.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/elements/__title/elements__title.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>

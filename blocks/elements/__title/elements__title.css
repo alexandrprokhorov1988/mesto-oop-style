@@ -8,5 +8,5 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  max-width: 225px;
+  max-width: calc(100% - 50px);
 }
