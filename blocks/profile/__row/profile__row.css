@@ -12,10 +12,17 @@
   -webkit-align-items: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
+  padding-right: 10px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
   .profile__row{
-    max-width: 282px;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .profile__row{
+    max-width: calc(100% - 20px);
   }
 }

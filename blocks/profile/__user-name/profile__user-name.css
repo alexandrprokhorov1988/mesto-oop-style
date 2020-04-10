@@ -15,7 +15,7 @@
   text-overflow: ellipsis;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .profile__user-name {
     font-size: 1.6875rem;
   }
@@ -23,6 +23,6 @@
 
 @media screen and (max-width: 768px) {
   .profile__user-name {
-    padding-right: 7px;
+    padding-right: 10px;
   }
 }
