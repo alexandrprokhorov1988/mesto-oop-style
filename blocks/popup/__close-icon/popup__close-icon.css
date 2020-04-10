@@ -17,6 +17,7 @@
   -webkit-transition: all ease .1s;
   -o-transition: all ease .1s;
   transition: all ease .1s;
+  border: none;
 }
 
 .popup__close-icon:hover {

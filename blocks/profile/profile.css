@@ -8,7 +8,7 @@
 
 .profile {
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 42px;
   max-width: 882px;
   width: calc(100% - 22.5%);
   display: -webkit-box;
@@ -37,5 +37,12 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .profile {
+    max-width: 282px;
+    width: 100%;
   }
 }

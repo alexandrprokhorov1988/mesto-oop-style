@@ -1,4 +1,10 @@
-.elements__element {
+@import url(../card/__img/card__img.css);
+@import url(../card/__like/card__like.css);
+@import url(../card/__title/card__title.css);
+@import url(../card/__info/card__info.css);
+@import url(../card/__high-image/card__high-image.css);
+
+.card {
   max-height: 361px;
   background: #FFFFFF;
   border-radius: 10px;

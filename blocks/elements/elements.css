@@ -1,15 +1,8 @@
-@import url(./__element/elements__element.css);
-@import url(./__img/elements__img.css);
-@import url(./__like/elements__like.css);
-@import url(./__title/elements__title.css);
-@import url(./__info/elements__info.css);
-@import url(./__high-image/elements__high-image.css);
-
 .elements {
   margin: 0 auto;
   max-width: 882px;
   width: calc(100% - 22.5%);
-  padding-top: 50px;
+  padding-top: 36px;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));

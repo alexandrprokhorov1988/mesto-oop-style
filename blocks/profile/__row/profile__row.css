@@ -24,5 +24,6 @@
 @media screen and (max-width: 425px) {
   .profile__row{
     max-width: calc(100% - 20px);
+    padding-top: 18px;
   }
 }

@@ -6,7 +6,7 @@ const jobInput = document.querySelector('[name=profession]');
 const nameField = document.querySelector(".profile__user-name");
 const jobField = document.querySelector(".profile__user-profession");
 const formElement = document.querySelector(".form");
-const images = document.querySelectorAll('.elements__img');
+const images = document.querySelectorAll('.card__img');
 
 function togglePopup() {
   popup.classList.toggle("popup_opened");
@@ -30,7 +30,7 @@ function formSubmitHandler(event) {
 function toggleImage() {
   const element = document.querySelector(".elements");
   let img = document.createElement('img');
-  img.classList.add('elements__high-image');
+  img.classList.add('card__high-image');
   img.setAttribute('src', this.getAttribute('src'));
   img.setAttribute('alt', this.getAttribute('alt'));
   img.addEventListener('click', function () {
