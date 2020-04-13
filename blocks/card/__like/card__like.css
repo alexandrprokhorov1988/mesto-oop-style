@@ -5,7 +5,7 @@
   background-position: center;
   width: 21px;
   height: 19px;
-  background-size: cover;
+  background-size: contain;
   border: none;
   cursor: pointer;
   outline: none;
@@ -15,6 +15,6 @@
 }
 
 .card__like:hover {
-  width: 31px;
+  width: 30px;
   height: 28px;
 }
