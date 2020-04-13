@@ -9,6 +9,8 @@
   border: none;
   cursor: pointer;
   outline: none;
+  -webkit-transition: all ease .1s;
+  -o-transition: all ease .1s;
   transition: all ease .1s;
 }
 

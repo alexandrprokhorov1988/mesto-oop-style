@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33cf8236-7f41-4c7d-9a65-7752980a042d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/card/__img/card__img.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/card/__img/card__img.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/card/__like/card__like.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/card/__like/card__like.css" afterDir="false" />
-    </list>
+    <list default="true" id="33cf8236-7f41-4c7d-9a65-7752980a042d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,20 +20,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card__like.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="card__like.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blocks/card/__like/card__like.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
               <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="card__img.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blocks/card/__img/card__img.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -267,12 +254,12 @@
       <workItem from="1586589073568" duration="2297000" />
       <workItem from="1586691821189" duration="973000" />
       <workItem from="1586774130900" duration="771000" />
-      <workItem from="1586795641461" duration="2267000" />
+      <workItem from="1586795641461" duration="2523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79615000" />
+    <option name="totallyTimeSpent" value="79871000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -285,9 +272,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.27142859" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.27142859" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3294893" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -296,7 +282,7 @@
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="4" visible="true" weight="0.3294893" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.3294893" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -621,17 +607,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/card/__img/card__img.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blocks/card/__like/card__like.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/card/__img/card__img.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
