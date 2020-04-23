@@ -42,16 +42,6 @@ const formElement = document.querySelector(".form");
 const card = document.querySelector('#card').content;
 const sectionElements = document.querySelector('.elements');
 
-function cloneCards(name, link, alt = 'Картинка.') {
-  const cardElement = card.cloneNode(true);
-  const cardImg = cardElement.querySelector('.card__img');
-  const cardTitle = cardElement.querySelector('.card__title');
-  cardImg.src = link;
-  cardImg.alt = alt;
-  cardTitle.textContent = name;
-  sectionElements.prepend(cardElement);
-}
-
 function togglePopup() {
   popup.classList.toggle("popup_opened");
   nameInput.value = nameField.textContent;
@@ -69,6 +59,22 @@ function formSubmitHandler(event) {
   nameField.textContent = nameInput.value;
   jobField.textContent = jobInput.value;
   popup.classList.toggle("popup_opened");
+}
+
+function changeLike() {
+  this.classList.toggle("card__like_active");
+}
+
+function cloneCards(name, link, alt = 'Картинка.') {
+  const cardElement = card.cloneNode(true);
+  const cardImg = cardElement.querySelector('.card__img');
+  const cardTitle = cardElement.querySelector('.card__title');
+  const buttonCardLike = cardElement.querySelector('.card__like');
+  cardImg.src = link;
+  cardImg.alt = alt;
+  cardTitle.textContent = name;
+  sectionElements.prepend(cardElement);
+  buttonCardLike.addEventListener("click", changeLike);
 }
 
 popupEditButton.addEventListener("click", togglePopup);
