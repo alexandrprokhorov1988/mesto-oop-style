@@ -1,0 +1,9 @@
+.card__high-img-container {
+  max-height: calc(75vh + 24px);
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

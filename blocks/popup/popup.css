@@ -9,9 +9,12 @@
   height: 100%;
   background-color: rgba(0,0,0,0.5);
   z-index: 1;
-  display: none;
+  visibility: hidden;
+  transition: visibility .5s, opacity .5s;
+  opacity: 0;
 }
 
 .popup_opened {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }

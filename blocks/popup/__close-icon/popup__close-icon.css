@@ -24,3 +24,12 @@
   transform: rotate(180deg);
   background-image: url(../../../images/close-icon-gray.svg);
 }
+
+@media screen and (max-width: 375px){
+  .popup__close-icon{
+    width: 30px;
+    height: 30px;
+    top: -32px;
+    right: -32px;
+  }
+}

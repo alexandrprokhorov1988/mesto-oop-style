@@ -37,7 +37,8 @@
 
       <template id="card">
         <article class="card">
-          <img class="card__img" src="" alt="">
+          <img class="card__img" src="./images/card-winter-1.jpg" alt="Зима.">
+          <button type="button" class="card__delete"></button>
           <div class="card__info">
             <h2 class="card__title"></h2>
             <button type="button" class="card__like"></button>
@@ -45,22 +46,46 @@
         </article>
       </template>
 
+
+      <div class="card__high-img-background">
+        <div class="card__high-img-container">
+          <img class="card__high-image" src="" alt="">
+          <h2 class="card__high-image-title"></h2>
+          <button type="button" class="popup__close-icon"></button>
+        </div>
+      </div>
+
+
     </section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
   </footer>
-  <div class="popup">
+
+  <div class="popup" id="editPopup">
     <div class="popup__container">
       <button type="button" class="popup__close-icon"></button>
       <h2 class="form__title">Редактировать профиль</h2>
-      <form action="#" class="form" method="get">
+      <form action="#" class="form" id="editForm" method="get">
         <input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
         <input class="form__input" type="text" name="profession" placeholder="Ваша профессия" required>
         <input class="form__submit-button" type="submit" name="submit" value="Сохранить">
       </form>
     </div>
   </div>
+
+  <div class="popup" id="addPopup">
+    <div class="popup__container">
+      <button type="button" class="popup__close-icon"></button>
+      <h2 class="form__title">Новое место</h2>
+      <form action="#" class="form" id="addForm" method="get">
+        <input class="form__input" type="text" name="imgName" placeholder="Название" required>
+        <input class="form__input" type="text" name="link" placeholder="Ссылка на картинку" required>
+        <input class="form__submit-button" type="submit" name="submit" value="Создать">
+      </form>
+    </div>
+  </div>
+
 </div>
 <script src="scripts/main.js"></script>
 </body>

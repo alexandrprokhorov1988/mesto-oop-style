@@ -1,11 +1,9 @@
 .card__high-image {
   width: 100%;
   height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  object-fit: contain;
-  background-color: rgba(0,0,0,0.5);
-  cursor: pointer;
+  max-width: 75vw;
+  max-height: 75vh;
+  margin: 0 auto;
+  z-index: 3;
+  object-fit: cover;
 }

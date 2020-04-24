@@ -16,9 +16,8 @@
   min-height: 330px;
 }
 
-
 @media screen and (max-width: 425px){
   .popup__container{
-    width: calc(100% - 35.5%);
+    width: calc(100% - 25%);
   }
 }
