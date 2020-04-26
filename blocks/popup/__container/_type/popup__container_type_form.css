@@ -1,11 +1,6 @@
-.popup__container {
+.popup__container_type_form {
   margin: 0 auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  position: relative;
   z-index: 2;
   background: #FFFFFF;
   -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
@@ -17,7 +12,7 @@
 }
 
 @media screen and (max-width: 425px){
-  .popup__container{
+  .popup__container_type_form{
     width: calc(100% - 25%);
   }
 }

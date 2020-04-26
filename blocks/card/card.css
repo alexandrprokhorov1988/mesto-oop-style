@@ -2,10 +2,6 @@
 @import url(../card/__like/card__like.css);
 @import url(../card/__title/card__title.css);
 @import url(../card/__info/card__info.css);
-@import url(../card/__img-background/card__high-img-background.css);
-@import url(../card/__high-image/card__high-image.css);
-@import url(../card/__high-image-title/card__high-image-title.css);
-@import url(../card/__high-img-container/card__high-img-container.css);
 @import url(../card/__delete/card__delete.css);
 
 .card {
