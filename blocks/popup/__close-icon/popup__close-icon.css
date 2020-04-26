@@ -21,6 +21,8 @@
 }
 
 .popup__close-icon:hover {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   background-image: url(../../../images/close-icon-gray.svg);
 }
