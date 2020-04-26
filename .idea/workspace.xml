@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33cf8236-7f41-4c7d-9a65-7752980a042d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_form.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_img.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_img.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,25 +14,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="68" column="8" lean-forward="true" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-              <folding>
-                <element signature="e#2056#2062#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+            <state relative-caret-position="820">
+              <caret line="126" selection-start-line="126" selection-end-line="126" />
               <folding>
                 <element signature="e#21#576#0" />
+                <element signature="e#25#108#0" />
+                <element signature="e#112#189#0" />
+                <element signature="e#193#278#0" />
+                <element signature="e#282#372#0" />
+                <element signature="e#376#467#0" />
+                <element signature="e#471#574#0" />
+                <element signature="n#!!block;n#changeLike#0" />
+                <element signature="n#!!block;n#showImgPopup#0" />
+                <element signature="n#!!block;n#removeCard#0" />
+                <element signature="n#!!block;n#cloneCards#0" />
+                <element signature="e#2473#2532#0" />
+                <element signature="n#!!block;n#addTextFromDOMtoInput#0" />
+                <element signature="n#!!block;n#togglePopup#0" />
+                <element signature="n#!!block;n#formSubmitHandlerEdit#0" />
+                <element signature="n#!!block;n#formSubmitHandlerAdd#0" />
+                <element signature="n#!!block;n#closePopup#0" />
+                <element signature="e#3305#3356#0" />
+                <element signature="n#!!block;n#showCards#0" />
+                <element signature="e#3416#3482#0" />
+                <element signature="n#!!block;n#addEventForPopups#0" />
+                <element signature="e#3655#3758#0" />
+                <element signature="e#3712#3753#0" />
+                <element signature="e#3508#3536#0" />
+                <element signature="e#3593#3649#0" />
+                <element signature="e#3705#3733#0" />
               </folding>
             </state>
           </provider>
@@ -63,6 +81,7 @@
       <find>butt</find>
       <find>closeImgPopup</find>
       <find>contai</find>
+      <find>sec</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,16 +131,16 @@
         <option value="$PROJECT_DIR$/blocks/form/form.css" />
         <option value="$PROJECT_DIR$/blocks/popup/popup__image/popup__image.css" />
         <option value="$PROJECT_DIR$/blocks/card/card.css" />
-        <option value="$PROJECT_DIR$/scripts/main.js" />
         <option value="$PROJECT_DIR$/blocks/popup/__image-title/popup__image-title.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__image/popup__image.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__close-icon/popup__close-icon.css" />
         <option value="$PROJECT_DIR$/blocks/card/__delete/card__delete.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_form.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_img.css" />
         <option value="$PROJECT_DIR$/blocks/popup/popup.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scripts/main.js" />
       </list>
     </option>
   </component>
@@ -254,12 +273,13 @@
       <workItem from="1587808514042" duration="345000" />
       <workItem from="1587832517847" duration="1871000" />
       <workItem from="1587852463422" duration="3625000" />
-      <workItem from="1587886715323" duration="5608000" />
+      <workItem from="1587886715323" duration="7491000" />
+      <workItem from="1587907430235" duration="2611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124319000" />
+    <option name="totallyTimeSpent" value="128813000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -272,8 +292,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26938775" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.2744898" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3294893" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -282,34 +303,34 @@
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.35914332" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.35914332" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="6" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19285715" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3294893" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3294893" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -536,13 +557,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-img-background/_show/card__popup-img-background_show.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-img-background/_show/card__popup-img-background_show.css" />
     <entry file="file://$PROJECT_DIR$/blocks/form/form.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -550,20 +565,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-img-background/card__popup-img-background.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-img-container/card__popup-img-container.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-img-background/card__popup-img-background.css" />
+    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-img-container/card__popup-img-container.css" />
     <entry file="file://$PROJECT_DIR$/blocks/card/card.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -571,20 +574,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-image/card__popup-image.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-image-title/card__popup-image-title.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-image/card__popup-image.css" />
+    <entry file="file://$PROJECT_DIR$/blocks/card/__popup-image-title/card__popup-image-title.css" />
     <entry file="file://$PROJECT_DIR$/blocks/popup/__image-title/popup__image-title.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -641,22 +632,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-          <folding>
-            <element signature="e#21#576#0" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="68" column="8" lean-forward="true" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+        <state relative-caret-position="820">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
           <folding>
-            <element signature="e#2056#2062#0" expanded="true" />
+            <element signature="e#21#576#0" />
+            <element signature="e#25#108#0" />
+            <element signature="e#112#189#0" />
+            <element signature="e#193#278#0" />
+            <element signature="e#282#372#0" />
+            <element signature="e#376#467#0" />
+            <element signature="e#471#574#0" />
+            <element signature="n#!!block;n#changeLike#0" />
+            <element signature="n#!!block;n#showImgPopup#0" />
+            <element signature="n#!!block;n#removeCard#0" />
+            <element signature="n#!!block;n#cloneCards#0" />
+            <element signature="e#2473#2532#0" />
+            <element signature="n#!!block;n#addTextFromDOMtoInput#0" />
+            <element signature="n#!!block;n#togglePopup#0" />
+            <element signature="n#!!block;n#formSubmitHandlerEdit#0" />
+            <element signature="n#!!block;n#formSubmitHandlerAdd#0" />
+            <element signature="n#!!block;n#closePopup#0" />
+            <element signature="e#3305#3356#0" />
+            <element signature="n#!!block;n#showCards#0" />
+            <element signature="e#3416#3482#0" />
+            <element signature="n#!!block;n#addEventForPopups#0" />
+            <element signature="e#3655#3758#0" />
+            <element signature="e#3712#3753#0" />
+            <element signature="e#3508#3536#0" />
+            <element signature="e#3593#3649#0" />
+            <element signature="e#3705#3733#0" />
           </folding>
         </state>
       </provider>

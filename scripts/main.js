@@ -44,26 +44,26 @@ const editForm = document.querySelector("#editForm");
 const addForm = document.querySelector("#addForm");
 const editPopup = document.querySelector("#editPopup");
 const addPopup = document.querySelector("#addPopup");
-const sectionElements = document.querySelector('.elements');
+const sectionElement = document.querySelector('.elements');
 const imgPopup = document.querySelector('#imgPopup');
 const img = imgPopup.querySelector('.popup__image');
 const imgTitle = imgPopup.querySelector('.popup__image-title');
 
-function changeLike() {
+const changeLike = function () {
   this.classList.toggle("card__like_active");
-}
+};
 
-function showImgPopup(link, title) {
+const showImgPopup = function (link, title) {
   img.src = link;
   imgTitle.textContent = title;
   togglePopup(imgPopup);
-}
+};
 
-function removeCard() {
+const removeCard = function () {
   this.closest('.card').remove();
-}
+};
 
-function cloneCards(name, link, alt = 'Картинка.') {
+const cloneCards = function (name, link, alt = 'Картинка.') {
   const card = document.querySelector('#card').content;
   const cardElement = card.cloneNode(true);
   const cardImg = cardElement.querySelector('.card__img');
@@ -73,50 +73,62 @@ function cloneCards(name, link, alt = 'Картинка.') {
   cardImg.src = link;
   cardImg.alt = alt;
   cardTitle.textContent = name;
-  sectionElements.prepend(cardElement);
+  sectionElement.prepend(cardElement);
   buttonCardLike.addEventListener("click", changeLike);
   cardImg.addEventListener('click', function () {
     showImgPopup(cardImg.src, cardTitle.textContent);
   });
   cardDeleteButton.addEventListener('click', removeCard);
-}
+};
 
-function addTextFromDOMtoInput() {
+const addTextFromDOMtoInput = function () {
   nameInput.value = nameField.textContent;
   jobInput.value = jobField.textContent;
-}
+};
 
-function togglePopup(element) {
+const togglePopup = function (element) {
   element.classList.toggle("popup_opened");
-}
+};
 
-function formSubmitHandlerEdit(event) {
+const formSubmitHandlerEdit = function (event) {
   event.preventDefault();
   nameField.textContent = nameInput.value;
   jobField.textContent = jobInput.value;
   togglePopup(editPopup);
-}
+};
 
-function formSubmitHandlerAdd(event) {
+const formSubmitHandlerAdd = function (event) {
   event.preventDefault();
   cloneCards(imgInput.value, linkInput.value);
   imgInput.value = '';
   linkInput.value = '';
   togglePopup(addPopup);
-}
+};
 
-function closePopup(event, element) {
+const closePopup = function (event, element) {
   if (event.target.classList.contains('popup') || event.target.classList.contains('popup__close-icon')) {
     element.classList.remove("popup_opened");
   }
+};
+
+function showCards() {
+  initialCards.forEach(element => {
+    cloneCards(element['name'], element['link'], element['alt'])
+  });
 }
 
-initialCards.forEach(element => {
-  cloneCards(element['name'], element['link'], element['alt'])
-});
+function addCloseEventsOnPopups() {
+  popups.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+      closePopup(event, element);
+    })
+  });
+}
+
 imgPopup.addEventListener('click', function () {
   togglePopup(imgPopup);
 });
+
 popupEditButton.addEventListener("click", function () {
   togglePopup(editPopup);
   addTextFromDOMtoInput();
@@ -126,10 +138,6 @@ popupAddButton.addEventListener("click", function () {
 });
 editForm.addEventListener('submit', formSubmitHandlerEdit);
 addForm.addEventListener('submit', formSubmitHandlerAdd);
-popups.forEach(function (element) {
-  element.addEventListener('click', function (event) {
-    closePopup(event, element);
-  })
-});
 
-
+showCards();
+addCloseEventsOnPopups();
