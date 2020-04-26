@@ -1,6 +1,4 @@
 .popup__container_type_img {
-  max-height: calc(75vh + 24px);
-  width: 75vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
