@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33cf8236-7f41-4c7d-9a65-7752980a042d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/blocks/popup/_type/popup_type_form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/_type/popup_type_img.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_img.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_img.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,20 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+            <state relative-caret-position="-60">
+              <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+              <folding>
+                <element signature="e#1761#1767#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="137">
+              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
               <folding>
                 <element signature="e#21#576#0" />
                 <element signature="e#25#108#0" />
@@ -40,8 +38,22 @@
                 <element signature="e#193#278#0" />
                 <element signature="e#282#372#0" />
                 <element signature="e#376#467#0" />
-                <element signature="e#471#574#0" />
-                <element signature="n#!!block;n#showCards#0" />
+                <element signature="e#471#556#0" />
+                <element signature="e#1624#1673#0" />
+                <element signature="e#1720#1798#0" />
+                <element signature="e#1832#1869#0" />
+                <element signature="e#2512#2571#0" />
+                <element signature="e#2703#2790#0" />
+                <element signature="e#2832#2879#0" />
+                <element signature="e#2929#3068#0" />
+                <element signature="e#3313#3472#0" />
+                <element signature="e#3419#3470#0" />
+                <element signature="n#!!block;n#addCloseEventsOnPopups#0" />
+                <element signature="e#3680#3783#0" />
+                <element signature="e#3737#3778#0" />
+                <element signature="e#3836#3864#0" />
+                <element signature="e#3922#3978#0" />
+                <element signature="e#4034#4062#0" />
               </folding>
             </state>
           </provider>
@@ -119,7 +131,6 @@
         <option value="$PROJECT_DIR$/blocks/card/__delete/card__delete.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_form.css" />
-        <option value="$PROJECT_DIR$/scripts/main.js" />
         <option value="$PROJECT_DIR$/blocks/card/__img/card__img.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__image/popup__image.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_img.css" />
@@ -128,6 +139,7 @@
         <option value="$PROJECT_DIR$/blocks/popup/_type/popup_type_img.css" />
         <option value="$PROJECT_DIR$/blocks/popup/_type/popup_type_form.css" />
         <option value="$PROJECT_DIR$/blocks/popup/popup.css" />
+        <option value="$PROJECT_DIR$/scripts/main.js" />
       </list>
     </option>
   </component>
@@ -283,12 +295,14 @@
       <workItem from="1587852463422" duration="3625000" />
       <workItem from="1587886715323" duration="7491000" />
       <workItem from="1587907430235" duration="3661000" />
-      <workItem from="1587929565550" duration="2028000" />
+      <workItem from="1587929565550" duration="2195000" />
+      <workItem from="1587994204641" duration="1203000" />
+      <workItem from="1588090735969" duration="1856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131891000" />
+    <option name="totallyTimeSpent" value="135117000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -301,9 +315,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.28061223" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.29285714" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3294893" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -312,7 +325,7 @@
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.35914332" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.35914332" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -584,23 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-          <folding>
-            <element signature="e#21#576#0" />
-            <element signature="e#25#108#0" />
-            <element signature="e#112#189#0" />
-            <element signature="e#193#278#0" />
-            <element signature="e#282#372#0" />
-            <element signature="e#376#467#0" />
-            <element signature="e#471#574#0" />
-            <element signature="n#!!block;n#showCards#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blocks/popup/__image/popup__image.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -662,8 +658,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+        <state relative-caret-position="-60">
+          <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+          <folding>
+            <element signature="e#1761#1767#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="e#21#576#0" />
+            <element signature="e#25#108#0" />
+            <element signature="e#112#189#0" />
+            <element signature="e#193#278#0" />
+            <element signature="e#282#372#0" />
+            <element signature="e#376#467#0" />
+            <element signature="e#471#556#0" />
+            <element signature="e#1624#1673#0" />
+            <element signature="e#1720#1798#0" />
+            <element signature="e#1832#1869#0" />
+            <element signature="e#2512#2571#0" />
+            <element signature="e#2703#2790#0" />
+            <element signature="e#2832#2879#0" />
+            <element signature="e#2929#3068#0" />
+            <element signature="e#3313#3472#0" />
+            <element signature="e#3419#3470#0" />
+            <element signature="n#!!block;n#addCloseEventsOnPopups#0" />
+            <element signature="e#3680#3783#0" />
+            <element signature="e#3737#3778#0" />
+            <element signature="e#3836#3864#0" />
+            <element signature="e#3922#3978#0" />
+            <element signature="e#4034#4062#0" />
+          </folding>
         </state>
       </provider>
     </entry>

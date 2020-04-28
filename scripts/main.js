@@ -25,9 +25,9 @@ const initialCards = [
     alt: 'Дорога в снегу.',
   },
   {
-    name: 'Открытая калитка',
+    name: 'Калитка',
     link: 'images/card-winter-1.jpg',
-    alt: 'Открытая калитка.',
+    alt: 'Калитка.',
   }
 ];
 
@@ -73,12 +73,12 @@ const cloneCards = function (name, link, alt = 'Картинка.') {
   cardImg.src = link;
   cardImg.alt = alt;
   cardTitle.textContent = name;
-  sectionElement.prepend(cardElement);
   buttonCardLike.addEventListener("click", changeLike);
   cardImg.addEventListener('click', function () {
     showImgPopup(cardImg.src, cardTitle.textContent);
   });
   cardDeleteButton.addEventListener('click', removeCard);
+  return cardElement;
 };
 
 const addTextFromDOMtoInput = function () {
@@ -97,25 +97,29 @@ const formSubmitHandlerEdit = function (event) {
   togglePopup(editPopup);
 };
 
+const insertPrependInDom = function (parentNode, childNode) {
+  parentNode.prepend(childNode);
+};
+
 const formSubmitHandlerAdd = function (event) {
   event.preventDefault();
-  cloneCards(imgInput.value, linkInput.value);
+  insertPrependInDom(sectionElement, cloneCards(imgInput.value, linkInput.value));
   imgInput.value = '';
   linkInput.value = '';
   togglePopup(addPopup);
 };
+
+function showCards() {
+  initialCards.forEach(element => {
+    insertPrependInDom(sectionElement, cloneCards(element['name'], element['link'], element['alt']));
+  });
+}
 
 const closePopup = function (event, element) {
   if (event.target.classList.contains('popup') || event.target.classList.contains('popup__close-icon')) {
     element.classList.remove("popup_opened");
   }
 };
-
-function showCards() {
-  initialCards.forEach(element => {
-    cloneCards(element['name'], element['link'], element['alt'])
-  });
-}
 
 function addCloseEventsOnPopups() {
   popups.forEach(function (element) {
