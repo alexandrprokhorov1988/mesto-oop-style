@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33cf8236-7f41-4c7d-9a65-7752980a042d" name="Default" comment="" />
+    <list default="true" id="33cf8236-7f41-4c7d-9a65-7752980a042d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +17,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60">
+            <state relative-caret-position="59">
               <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
               <folding>
                 <element signature="e#1761#1767#0" expanded="true" />
@@ -26,31 +29,15 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="-1675">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
-                <element signature="e#21#576#0" />
                 <element signature="e#25#108#0" />
                 <element signature="e#112#189#0" />
                 <element signature="e#193#278#0" />
                 <element signature="e#282#372#0" />
                 <element signature="e#376#467#0" />
                 <element signature="e#471#556#0" />
-                <element signature="e#1624#1673#0" />
-                <element signature="e#1720#1798#0" />
-                <element signature="e#1832#1869#0" />
-                <element signature="e#2512#2571#0" />
-                <element signature="e#2703#2790#0" />
-                <element signature="e#2832#2879#0" />
-                <element signature="e#2929#3068#0" />
-                <element signature="e#3313#3472#0" />
-                <element signature="e#3419#3470#0" />
-                <element signature="n#!!block;n#addCloseEventsOnPopups#0" />
-                <element signature="e#3680#3783#0" />
-                <element signature="e#3737#3778#0" />
-                <element signature="e#3836#3864#0" />
-                <element signature="e#3922#3978#0" />
-                <element signature="e#4034#4062#0" />
               </folding>
             </state>
           </provider>
@@ -78,6 +65,7 @@
       <find>closeImgPopup</find>
       <find>contai</find>
       <find>sec</find>
+      <find>closes</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,11 +119,11 @@
         <option value="$PROJECT_DIR$/blocks/card/__img/card__img.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__image/popup__image.css" />
         <option value="$PROJECT_DIR$/blocks/popup/__container/_type/popup__container_type_img.css" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/blocks/popup/_type/popup_type_img.css" />
         <option value="$PROJECT_DIR$/blocks/popup/_type/popup_type_form.css" />
         <option value="$PROJECT_DIR$/blocks/popup/popup.css" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/scripts/main.js" />
       </list>
     </option>
@@ -180,43 +168,26 @@
               <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
               <item name="mesto" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
-              <item name="popup" type="462c0819:PsiDirectoryNode" />
+              <item name="elements" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
               <item name="mesto" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
-              <item name="popup" type="462c0819:PsiDirectoryNode" />
-              <item name="__container" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
               <item name="mesto" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
-              <item name="popup" type="462c0819:PsiDirectoryNode" />
-              <item name="__container" type="462c0819:PsiDirectoryNode" />
-              <item name="_type" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="__input" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
               <item name="mesto" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
-              <item name="popup" type="462c0819:PsiDirectoryNode" />
-              <item name="__image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mesto" type="462c0819:PsiDirectoryNode" />
-              <item name="blocks" type="462c0819:PsiDirectoryNode" />
-              <item name="popup" type="462c0819:PsiDirectoryNode" />
-              <item name="__image-title" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mesto" type="462c0819:PsiDirectoryNode" />
-              <item name="blocks" type="462c0819:PsiDirectoryNode" />
-              <item name="popup" type="462c0819:PsiDirectoryNode" />
-              <item name="_type" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mesto" type="b2602c69:ProjectViewProjectNode" />
@@ -231,7 +202,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test-css-1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../restaurant" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -295,11 +266,20 @@
       <workItem from="1587929565550" duration="2195000" />
       <workItem from="1587994204641" duration="1203000" />
       <workItem from="1588090735969" duration="2076000" />
+      <workItem from="1588169209993" duration="3550000" />
+      <workItem from="1588352349361" duration="374000" />
+      <workItem from="1588409783563" duration="21000" />
+      <workItem from="1588674941527" duration="460000" />
+      <workItem from="1588678344524" duration="12000" />
+      <workItem from="1588682679178" duration="45000" />
+      <workItem from="1588700443851" duration="73000" />
+      <workItem from="1588713816805" duration="47000" />
+      <workItem from="1588718569541" duration="1504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135337000" />
+    <option name="totallyTimeSpent" value="141423000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -314,43 +294,43 @@
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" weight="0.29285714" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2489796" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3294893" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.35914332" />
-      <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="6" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19285715" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3294893" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3294893" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -379,13 +359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/form/__input/form__input.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -485,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/elements/elements.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -588,13 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blocks/page/page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blocks/popup/__image/popup__image.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -613,16 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="160">
-            <caret line="8" column="115" selection-start-line="8" selection-start-column="115" selection-end-line="8" selection-end-column="115" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -654,9 +603,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="180">
+            <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/page/page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/elements/elements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/form/__input/form__input.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="39" lean-forward="true" selection-start-line="15" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
+        <state relative-caret-position="59">
           <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
           <folding>
             <element signature="e#1761#1767#0" expanded="true" />
@@ -666,31 +646,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="-1675">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
-            <element signature="e#21#576#0" />
             <element signature="e#25#108#0" />
             <element signature="e#112#189#0" />
             <element signature="e#193#278#0" />
             <element signature="e#282#372#0" />
             <element signature="e#376#467#0" />
             <element signature="e#471#556#0" />
-            <element signature="e#1624#1673#0" />
-            <element signature="e#1720#1798#0" />
-            <element signature="e#1832#1869#0" />
-            <element signature="e#2512#2571#0" />
-            <element signature="e#2703#2790#0" />
-            <element signature="e#2832#2879#0" />
-            <element signature="e#2929#3068#0" />
-            <element signature="e#3313#3472#0" />
-            <element signature="e#3419#3470#0" />
-            <element signature="n#!!block;n#addCloseEventsOnPopups#0" />
-            <element signature="e#3680#3783#0" />
-            <element signature="e#3737#3778#0" />
-            <element signature="e#3836#3864#0" />
-            <element signature="e#3922#3978#0" />
-            <element signature="e#4034#4062#0" />
           </folding>
         </state>
       </provider>
