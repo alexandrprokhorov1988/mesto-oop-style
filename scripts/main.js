@@ -57,9 +57,9 @@ const changeLike = function (e) {
 const showImgPopup = function (e) {
   if (e.target.classList.contains('card__img')) {
     img.src = e.target.src;
-    imgTitle.textContent = e.target.title;
-
-    console.log(e.querySelector('.card__title'));
+    imgTitle.textContent = e.target.dataset.title;
+    console.log(e.target.nextElementSibling.nextElementSibling.);
+    img.alt = e.target.alt;
     togglePopup(imgPopup);
   }
 };
@@ -75,6 +75,7 @@ const cloneCards = function (name, link, alt = 'Картинка.') {
   const cardElement = card.cloneNode(true);
   const cardImg = cardElement.querySelector('.card__img');
   const cardTitle = cardElement.querySelector('.card__title');
+  cardImg.dataset.title = name;
   cardImg.src = link;
   cardImg.alt = alt;
   cardTitle.textContent = name;
