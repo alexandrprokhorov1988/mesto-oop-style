@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+            <state relative-caret-position="480">
+              <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
               <folding>
                 <element signature="e#1761#1767#0" expanded="true" />
               </folding>
@@ -29,8 +29,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1675">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="139">
+              <caret line="57" column="49" lean-forward="true" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
               <folding>
                 <element signature="e#25#108#0" />
                 <element signature="e#112#189#0" />
@@ -66,6 +66,8 @@
       <find>contai</find>
       <find>sec</find>
       <find>closes</find>
+      <find>addf</find>
+      <find>edf</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,7 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +199,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,12 +276,16 @@
       <workItem from="1588682679178" duration="45000" />
       <workItem from="1588700443851" duration="73000" />
       <workItem from="1588713816805" duration="47000" />
-      <workItem from="1588718569541" duration="1504000" />
+      <workItem from="1588718569541" duration="1658000" />
+      <workItem from="1588763867324" duration="119000" />
+      <workItem from="1588764299645" duration="64000" />
+      <workItem from="1588772737733" duration="7000" />
+      <workItem from="1588781895555" duration="248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141423000" />
+    <option name="totallyTimeSpent" value="142015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -294,7 +300,7 @@
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2489796" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26938775" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3294893" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -636,8 +642,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+        <state relative-caret-position="480">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
           <folding>
             <element signature="e#1761#1767#0" expanded="true" />
           </folding>
@@ -646,8 +652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1675">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="139">
+          <caret line="57" column="49" lean-forward="true" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
           <folding>
             <element signature="e#25#108#0" />
             <element signature="e#112#189#0" />
