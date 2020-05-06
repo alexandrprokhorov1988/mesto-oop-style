@@ -58,7 +58,8 @@ const showImgPopup = function (e) {
   if (e.target.classList.contains('card__img')) {
     img.src = e.target.src;
     imgTitle.textContent = e.target.title;
-    console.log(e.target);
+
+    console.log(e.querySelector('.card__title'));
     togglePopup(imgPopup);
   }
 };
