@@ -58,7 +58,7 @@ const showImgPopup = function (e) {
   if (e.target.classList.contains('card__img')) {
     img.src = e.target.src;
     imgTitle.textContent = e.target.dataset.title;
-    console.log(e.target.nextElementSibling.nextElementSibling);
+    //console.log(e.target.closest('.card').querySelector('.card__title').textContent);
     img.alt = e.target.alt;
     togglePopup(imgPopup);
   }
