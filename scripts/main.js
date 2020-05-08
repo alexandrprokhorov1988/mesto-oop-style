@@ -88,6 +88,7 @@ const addTextFromDOMtoInput = function () {
 const togglePopup = function (element) {
   element.classList.toggle("popup_opened");
   document.addEventListener('keydown', closePopupKey);
+  document.addEventListener('click', closePopup);
 };
 
 const formSubmitHandlerEdit = function (event) {
@@ -118,6 +119,7 @@ const showCards = function () {
 const closePopup = function (event) {
   if (event.target.classList.contains('popup') || event.target.classList.contains('popup__close-icon')) {
     event.target.closest('.popup').classList.remove("popup_opened");
+    document.removeEventListener('click', closePopup);
   }
 };
 
@@ -147,4 +149,3 @@ addForm.addEventListener('submit', formSubmitHandlerAdd);
 sectionElement.addEventListener('click', changeLike);
 sectionElement.addEventListener('click', removeCard);
 sectionElement.addEventListener('click', showImgPopup);
-document.addEventListener('click', closePopup);
