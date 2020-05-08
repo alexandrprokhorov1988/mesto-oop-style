@@ -10,8 +10,13 @@
   padding-top: 8px;
   width: 100%;
 }
-.form__input:not(:first-of-type){
+
+.form__input:not(:first-of-type) {
   margin-top: 23px;
+}
+
+.form__input:invalid {
+  border-bottom: 1px solid #FF0000;
 }
 
 .form__input::-webkit-input-placeholder {

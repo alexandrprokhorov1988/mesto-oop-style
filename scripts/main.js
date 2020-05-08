@@ -30,7 +30,6 @@ const initialCards = [
     alt: 'Калитка.',
   }
 ];
-
 const popupEditButton = document.querySelector(".profile__edit-button");
 const popupAddButton = document.querySelector(".profile__add-button");
 const nameInput = document.querySelector('[name=name]');
@@ -48,7 +47,6 @@ const imgPopup = document.querySelector('#imgPopup');
 const img = imgPopup.querySelector('.popup__image');
 const imgTitle = imgPopup.querySelector('.popup__image-title');
 const allPopups = Array.from(document.querySelectorAll('.popup'));
-
 
 const changeLike = function (e) {
   if (e.target.classList.contains('card__like')) {
@@ -89,6 +87,7 @@ const addTextFromDOMtoInput = function () {
 
 const togglePopup = function (element) {
   element.classList.toggle("popup_opened");
+  document.addEventListener('keydown', closePopupKey);
 };
 
 const formSubmitHandlerEdit = function (event) {
@@ -110,11 +109,11 @@ const formSubmitHandlerAdd = function (event) {
   togglePopup(addPopup);
 };
 
-function showCards() {
+const showCards = function () {
   initialCards.forEach(element => {
     renderCard(sectionElement, cloneCards(element['name'], element['link'], element['alt']));
   });
-}
+};
 
 const closePopup = function (event) {
   if (event.target.classList.contains('popup') || event.target.classList.contains('popup__close-icon')) {
@@ -124,11 +123,13 @@ const closePopup = function (event) {
 
 const closePopupKey = function (event) {
   if (event.key === "Escape") {
-    allPopups.forEach((element) => {
-      element.classList.remove("popup_opened");
+    allPopups.forEach(function (elem) {
+      elem.classList.remove("popup_opened");
     });
+    document.removeEventListener('keydown', closePopupKey);
   }
 };
+
 showCards();
 
 imgPopup.addEventListener('click', function () {
@@ -147,4 +148,3 @@ sectionElement.addEventListener('click', changeLike);
 sectionElement.addEventListener('click', removeCard);
 sectionElement.addEventListener('click', showImgPopup);
 document.addEventListener('click', closePopup);
-document.addEventListener('keydown', closePopupKey);
