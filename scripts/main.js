@@ -138,8 +138,8 @@ imgPopup.addEventListener('click', function () {
   togglePopup(imgPopup);
 });
 popupEditButton.addEventListener("click", function () {
-  togglePopup(editPopup);
   addTextFromDOMtoInput();
+  togglePopup(editPopup);
 });
 popupAddButton.addEventListener("click", function () {
   togglePopup(addPopup);

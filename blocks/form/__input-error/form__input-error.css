@@ -9,4 +9,6 @@
   color: #FF0000;
   padding-top: 5px;
   transition: .3s;
+  opacity: 0;
+  visibility: hidden;
 }

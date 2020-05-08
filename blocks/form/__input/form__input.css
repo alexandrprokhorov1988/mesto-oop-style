@@ -15,10 +15,6 @@
   margin-top: 23px;
 }
 
-.form__input:invalid {
-  border-bottom: 1px solid #FF0000;
-}
-
 .form__input::-webkit-input-placeholder {
   font-weight: normal;
   font-size: 14px;

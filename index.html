@@ -63,12 +63,12 @@
       <form action="#" class="form" id="editForm" method="get" novalidate>
         <label class="form__label">
           <input class="form__input" type="text" name="name" placeholder="Ваше имя" minlength="2" maxlength="40"
-                 required pattern="[а-яёА-ЯЁa-zA-Z\s-]+">
+                 required pattern="^\S[а-яёА-ЯЁa-zA-Z-\s]+" id="name-input">
           <span class="form__input-error" id="name-input-error"></span>
         </label>
         <label class="form__label">
           <input class="form__input" type="text" name="profession" placeholder="Ваша профессия" minlength="2"
-                 maxlength="200" required>
+                 maxlength="200" required id="profession-input" pattern="^\S[а-яёА-ЯЁa-zA-Z0-9-\s]+">
           <span class="form__input-error" id="profession-input-error"></span>
           <input class="form__submit-button" type="submit" name="submit" value="Сохранить">
         </label>
@@ -82,12 +82,13 @@
       <form action="#" class="form" id="addForm" method="get" novalidate>
         <label class="form__label">
           <input class="form__input" type="text" name="imgName" placeholder="Название" minlength="1" maxlength="30"
-                 required>
+                 required id="imgName-input" pattern="^\S[а-яёА-ЯЁa-zA-Z0-9-\s]+">
           <span class="form__input-error" id="imgName-input-error"></span>
         </label>
         <label class="form__label">
           <input class="form__input" type="text" name="link" placeholder="Ссылка на картинку" required
-                 pattern="^(?:(?:https?|HTTPS?|ftp|FTP):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)*)(?::\d{2,})?(?:[\/?#]\S*)?$">
+                 pattern="^(?:(?:https?|HTTPS?|ftp|FTP):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)*)(?::\d{2,})?(?:[\/?#]\S*)?$"
+                 id="link-input">
           <span class="form__input-error" id="link-input-error"></span>
           <input class="form__submit-button form__submit-button_inactive" type="submit" name="submit" value="Создать">
         </label>

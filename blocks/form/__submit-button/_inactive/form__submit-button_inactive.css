@@ -4,4 +4,6 @@
   opacity: 0.2;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border: 1px solid #000000;
+  pointer-events: none;
+  user-select: none;
 }
