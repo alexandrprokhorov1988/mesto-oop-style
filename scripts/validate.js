@@ -22,7 +22,6 @@ function hideInputError(formElement, inputElement) {
 }
 
 function checkInputValidity(formElement, inputElement) {
-  console.log(inputElement.validationMessage);//todo
   if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage);
   } else {
