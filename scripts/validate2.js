@@ -31,7 +31,7 @@ function checkInputValidity(formElement, inputElement) {
 }
 
 function hasValidInput(inputs) {
-  return inputs.some((inputElement) => {
+  return inputs.some(function (inputElement) {
     return !inputElement.validity.valid;
   });
 }
@@ -46,13 +46,10 @@ function toggleButtonState(inputs, submitButton) {
 
 function setEventListeners(formElement, inputs, submitButton) {
   inputs.forEach((inputElement) => {
-    inputElement.addEventListener('input', () => {
+    inputElement.addEventListener('input', function () {
       checkInputValidity(formElement, inputElement);
       toggleButtonState(inputs, submitButton);
     });
-  });
-  formElement.addEventListener('submit', () => {
-    toggleButtonState(inputs, submitButton);
   });
 }
 
@@ -62,6 +59,9 @@ function enableValidation(obj) {
     const inputs = Array.from(formElement.querySelectorAll(obj['inputSelector']));
     const submitButton = formElement.querySelector(obj['submitButtonSelector']);
     setEventListeners(formElement, inputs, submitButton);
+    formElement.addEventListener('submit', function () {
+      toggleButtonState(inputs, submitButton);
+    });
   });
 }
 
