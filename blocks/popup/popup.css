@@ -37,8 +37,3 @@
   -ms-flex-align: center;
   align-items: center;
 }
-
-.popup_opened {
-  visibility: visible;
-  opacity: 1;
-}
