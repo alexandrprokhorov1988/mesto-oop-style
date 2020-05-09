@@ -8,6 +8,8 @@
   line-height: 15px;
   color: #FF0000;
   padding-top: 5px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
   opacity: 0;
   visibility: hidden;

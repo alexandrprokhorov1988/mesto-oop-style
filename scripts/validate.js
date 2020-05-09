@@ -31,12 +31,12 @@ function checkInputValidity(formElement, inputElement) {
 
 function hasValidInput(inputs) {
   return inputs.some((inputElement) => {
-    return !inputElement.validity.valid;
+    return inputElement.validity.valid;
   });
 }
 
 function toggleButtonState(inputs, submitButton) {
-  if (hasValidInput(inputs)) {
+  if (!hasValidInput(inputs)) {
     submitButton.classList.add('form__submit-button_inactive');
   } else {
     submitButton.classList.remove('form__submit-button_inactive');
@@ -65,8 +65,3 @@ function enableValidation(obj) {
 }
 
 enableValidation(validation);
-
-
-
-
-
