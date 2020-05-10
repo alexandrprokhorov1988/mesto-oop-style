@@ -38,3 +38,9 @@
   font-size: 14px;
   line-height: 17px;
 }
+
+@media screen and (max-width: 375px){
+  .form__input{
+   outline: none;
+  }
+}

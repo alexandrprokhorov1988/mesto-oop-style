@@ -63,7 +63,7 @@
       <form action="#" class="form" id="editForm" method="get" novalidate>
         <label class="form__label">
           <input class="form__input" type="text" name="name" placeholder="Ваше имя" minlength="2" maxlength="40"
-                 required pattern="^\S[а-яёА-ЯЁa-zA-Z-\s]+" id="name-input">
+                 required pattern="^\S[а-яёА-ЯЁa-zA-Z-\s]*" id="name-input">
           <span class="form__input-error" id="name-input-error"></span>
         </label>
         <label class="form__label">
@@ -81,7 +81,7 @@
       <h2 class="form__title">Новое место</h2>
       <form action="#" class="form" id="addForm" method="get" novalidate>
         <label class="form__label">
-          <input class="form__input" type="text" name="imgName" placeholder="Название" minlength="1" maxlength="30"
+          <input class="form__input" type="text" name="imgName" placeholder="Название" minlength="100" maxlength="30"
                  required id="imgName-input" pattern="^\S[а-яёА-ЯЁa-zA-Z0-9-\s]+">
           <span class="form__input-error" id="imgName-input-error"></span>
         </label>

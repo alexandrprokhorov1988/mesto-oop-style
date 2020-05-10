@@ -2,7 +2,7 @@
   margin: 0 auto;
   max-width: 882px;
   width: calc(100% - 22.5%);
-  padding-top: 36px;
+  padding-top: 47px;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));

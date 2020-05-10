@@ -17,6 +17,7 @@
   -webkit-transition: width ease 1s;
   -o-transition: width ease 1s;
   transition: width ease 1s;
+  margin-top: 7px;
 }
 
 .profile__edit-button:hover {
@@ -28,5 +29,6 @@
   .profile__edit-button {
     width: 18px;
     height: 18px;
+    margin-top: 0;
   }
 }
