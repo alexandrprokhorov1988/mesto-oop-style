@@ -30,18 +30,18 @@ const initialCards = [
     alt: 'Калитка.',
   }
 ];
-const popupEditButton = document.querySelector(".profile__edit-button");
-const popupAddButton = document.querySelector(".profile__add-button");
+const popupEditButton = document.querySelector('.profile__edit-button');
+const popupAddButton = document.querySelector('.profile__add-button');
 const nameInput = document.querySelector('[name=name]');
 const jobInput = document.querySelector('[name=profession]');
 const imgInput = document.querySelector('[name=imgName]');
 const linkInput = document.querySelector('[name=link]');
-const nameField = document.querySelector(".profile__user-name");
-const jobField = document.querySelector(".profile__user-profession");
-const editForm = document.querySelector("#editForm");
-const addForm = document.querySelector("#addForm");
-const editPopup = document.querySelector("#editPopup");
-const addPopup = document.querySelector("#addPopup");
+const nameField = document.querySelector('.profile__user-name');
+const jobField = document.querySelector('.profile__user-profession');
+const editForm = document.querySelector('#editForm');
+const addForm = document.querySelector('#addForm');
+const editPopup = document.querySelector('#editPopup');
+const addPopup = document.querySelector('#addPopup');
 const sectionElement = document.querySelector('.elements');
 const imgPopup = document.querySelector('#imgPopup');
 const img = imgPopup.querySelector('.popup__image');
@@ -88,26 +88,26 @@ const togglePopup = (element) => {
   element.classList.toggle(popupOpenClass);
 };
 
+const closePopup = () => {
+  const openedPopup = document.querySelector(`.${popupOpenClass}`);
+  if (openedPopup) {
+    togglePopup(openedPopup);
+  }
+};
+
+const closePopupKey = (event) => {
+  if (event.key === 'Escape') {
+    closePopup();
+    document.removeEventListener('keydown', closePopupKey);
+  }
+};
+
 const removeCloseEvents = () => {
   document.removeEventListener('keydown', closePopupKey);
 };
 
 const setCloseEvents = () => {
   document.addEventListener('keydown', closePopupKey);
-};
-
-const closePopup = () => {
-  const openedPopup = document.querySelector(`.${popupOpenClass}`);
-  if (openedPopup) {
-    togglePopup(openedPopup);
-  }
-  removeCloseEvents();
-};
-
-const closePopupKey = (event) => {
-  if (event.key === "Escape") {
-    closePopup();
-  }
 };
 
 const showImgPopup = (e) => {
@@ -130,6 +130,7 @@ const formSubmitHandlerEdit = (event) => {
   nameField.textContent = nameInput.value;
   jobField.textContent = jobInput.value;
   closePopup();
+  removeCloseEvents();
 };
 
 const formSubmitHandlerAdd = (event) => {
@@ -138,11 +139,13 @@ const formSubmitHandlerAdd = (event) => {
   imgInput.value = '';
   linkInput.value = '';
   closePopup();
+  removeCloseEvents();
 };
 
 const closePopupOverlay = (e) => {
   if (e.target.classList.contains(popupNameClass) || e.target.classList.contains(closeIconClass)) {
     closePopup();
+    removeCloseEvents();
   }
 };
 
@@ -160,13 +163,14 @@ const showCards = () => {
 
 setButtonCloseEvents();
 showCards();
+addTextFromDOMtoInput();
 
-popupEditButton.addEventListener("click", () => {
+popupEditButton.addEventListener('click', () => {
   addTextFromDOMtoInput();
   togglePopup(editPopup);
   setCloseEvents();
 });
-popupAddButton.addEventListener("click", () => {
+popupAddButton.addEventListener('click', () => {
   togglePopup(addPopup);
   setCloseEvents();
 });

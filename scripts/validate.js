@@ -38,12 +38,15 @@ function hasValidInput(inputs) {
 function toggleButtonState(inputs, submitButton, inactiveButtonClass) {
   if (hasValidInput(inputs)) {
     submitButton.classList.add(inactiveButtonClass);
+    submitButton.disabled = true;
   } else {
     submitButton.classList.remove(inactiveButtonClass);
+    submitButton.disabled = '';
   }
 }
 
 function setEventListeners(formElement, inputs, submitButton, {inactiveButtonClass, ...rest}) {
+  toggleButtonState(inputs, submitButton, inactiveButtonClass);
   inputs.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {
       checkInputValidity(formElement, inputElement, rest);
@@ -51,7 +54,7 @@ function setEventListeners(formElement, inputs, submitButton, {inactiveButtonCla
     });
   });
   formElement.addEventListener('submit', () => {
-    toggleButtonState(inputs, submitButton, inactiveButtonClass);
+    toggleButtonState(inputs, submitButton, inactiveButtonClass); //проверка валидности инпутов после отправки формы
   });
 }
 
