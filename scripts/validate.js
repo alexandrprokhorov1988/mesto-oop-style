@@ -21,7 +21,7 @@ function hideInputError(formElement, inputElement, inputErrorClass, errorClass) 
   errorElement.textContent = '';
 }
 
-function checkInputValidity(formElement, inputElement, {inputErrorClass, errorClass}) {
+function checkInputValidity(formElement, inputElement, inputErrorClass, errorClass) {
   if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage, inputErrorClass, errorClass);
   } else {
@@ -45,17 +45,33 @@ function toggleButtonState(inputs, submitButton, inactiveButtonClass) {
   }
 }
 
-function setEventListeners(formElement, inputs, submitButton, {inactiveButtonClass, ...rest}) {
+function setEventListeners(formElement, inputs, submitButton, {inactiveButtonClass, inputErrorClass, errorClass}) {
   toggleButtonState(inputs, submitButton, inactiveButtonClass);
   inputs.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {
-      checkInputValidity(formElement, inputElement, rest);
+      checkInputValidity(formElement, inputElement, inputErrorClass, errorClass);
       toggleButtonState(inputs, submitButton, inactiveButtonClass);
     });
   });
   formElement.addEventListener('submit', () => {
     toggleButtonState(inputs, submitButton, inactiveButtonClass); //проверка валидности инпутов после отправки формы
   });
+
+
+  popupAddButton.addEventListener('click', () => {
+    inputs.forEach((inputElement) => {
+      hideInputError(formElement, inputElement, inputErrorClass, errorClass);
+    });
+  });
+  popupEditButton.addEventListener('click', () => {
+    inputs.forEach((inputElement) => {
+      checkInputValidity(formElement, inputElement, inputErrorClass, errorClass);
+      toggleButtonState(inputs, submitButton, inactiveButtonClass);
+      hideInputError(formElement, inputElement, inputErrorClass, errorClass);
+    });
+  });
+
+
 }
 
 function enableValidation({formSelector, inputSelector, submitButtonSelector, ...rest}) {
@@ -68,3 +84,4 @@ function enableValidation({formSelector, inputSelector, submitButtonSelector, ..
 }
 
 enableValidation(validation);
+
