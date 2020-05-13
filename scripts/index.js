@@ -133,11 +133,15 @@ const formSubmitHandlerEdit = (event) => {
   removeCloseEvents();
 };
 
+const resetInputs = (imgInput, linkInput) => {
+  imgInput.value = '';
+  linkInput.value = '';
+};
+
 const formSubmitHandlerAdd = (event) => {
   event.preventDefault();
   renderCard(sectionElement, cloneCards(imgInput.value, linkInput.value));
-  imgInput.value = '';
-  linkInput.value = '';
+  resetInputs(imgInput, linkInput);
   closePopup();
   removeCloseEvents();
 };
@@ -171,6 +175,7 @@ popupEditButton.addEventListener('click', () => {
   setCloseEvents();
 });
 popupAddButton.addEventListener('click', () => {
+  resetInputs(imgInput, linkInput);
   togglePopup(addPopup);
   setCloseEvents();
 });

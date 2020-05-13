@@ -4,9 +4,7 @@ const validation = {
   submitButtonSelector: '.form__submit-button',
   inactiveButtonClass: 'form__submit-button_inactive',
   inputErrorClass: 'form__input_type_error',
-  errorClass: 'form__input-error_visible',
-  addButtonSelector: '.profile__add-button',
-  editButtonSelector: '.profile__edit-button'
+  errorClass: 'form__input-error_visible'
 };
 
 function showInputError(formElement, inputElement, message, inputErrorClass, errorClass) {
@@ -61,6 +59,7 @@ function setEventListeners(formElement, inputs, submitButton, addButton, editBut
   addButton.addEventListener('click', () => {
     inputs.forEach((inputElement) => {
       hideInputError(formElement, inputElement, inputErrorClass, errorClass);
+      toggleButtonState(inputs, submitButton, inactiveButtonClass);
     });
   });
   editButton.addEventListener('click', () => {
@@ -71,16 +70,14 @@ function setEventListeners(formElement, inputs, submitButton, addButton, editBut
   });
 }
 
-function enableValidation({formSelector, inputSelector, submitButtonSelector, addButtonSelector, editButtonSelector, ...rest}) {
+function enableValidation({formSelector, inputSelector, submitButtonSelector, ...rest}, addButton, editButton) {
   const forms = Array.from(document.querySelectorAll(formSelector));
   forms.forEach((formElement) => {
     const inputs = Array.from(formElement.querySelectorAll(inputSelector));
     const submitButton = formElement.querySelector(submitButtonSelector);
-    const addButton = document.querySelector(addButtonSelector);
-    const editButton = document.querySelector(editButtonSelector);
     setEventListeners(formElement, inputs, submitButton, addButton, editButton, rest);
   });
 }
 
-enableValidation(validation);
+enableValidation(validation, popupAddButton, popupEditButton);
 
