@@ -67,7 +67,6 @@ function setEventListeners(formElement, inputs, submitButton, {inactiveButtonCla
     inputs.forEach((inputElement) => {
       checkInputValidity(formElement, inputElement, inputErrorClass, errorClass);
       toggleButtonState(inputs, submitButton, inactiveButtonClass);
-      hideInputError(formElement, inputElement, inputErrorClass, errorClass);
     });
   });
 
