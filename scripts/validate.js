@@ -4,7 +4,9 @@ const validation = {
   submitButtonSelector: '.form__submit-button',
   inactiveButtonClass: 'form__submit-button_inactive',
   inputErrorClass: 'form__input_type_error',
-  errorClass: 'form__input-error_visible'
+  errorClass: 'form__input-error_visible',
+  addButtonSelector: '.profile__add-button',
+  editButtonSelector: '.profile__edit-button'
 };
 
 function showInputError(formElement, inputElement, message, inputErrorClass, errorClass) {
@@ -45,7 +47,7 @@ function toggleButtonState(inputs, submitButton, inactiveButtonClass) {
   }
 }
 
-function setEventListeners(formElement, inputs, submitButton, {inactiveButtonClass, inputErrorClass, errorClass}) {
+function setEventListeners(formElement, inputs, submitButton, addButton, editButton, {inactiveButtonClass, inputErrorClass, errorClass}) {
   toggleButtonState(inputs, submitButton, inactiveButtonClass);
   inputs.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {
@@ -56,29 +58,27 @@ function setEventListeners(formElement, inputs, submitButton, {inactiveButtonCla
   formElement.addEventListener('submit', () => {
     toggleButtonState(inputs, submitButton, inactiveButtonClass); //проверка валидности инпутов после отправки формы
   });
-
-
-  popupAddButton.addEventListener('click', () => {
+  addButton.addEventListener('click', () => {
     inputs.forEach((inputElement) => {
       hideInputError(formElement, inputElement, inputErrorClass, errorClass);
     });
   });
-  popupEditButton.addEventListener('click', () => {
+  editButton.addEventListener('click', () => {
     inputs.forEach((inputElement) => {
       checkInputValidity(formElement, inputElement, inputErrorClass, errorClass);
       toggleButtonState(inputs, submitButton, inactiveButtonClass);
     });
   });
-
-
 }
 
-function enableValidation({formSelector, inputSelector, submitButtonSelector, ...rest}) {
+function enableValidation({formSelector, inputSelector, submitButtonSelector, addButtonSelector, editButtonSelector, ...rest}) {
   const forms = Array.from(document.querySelectorAll(formSelector));
   forms.forEach((formElement) => {
     const inputs = Array.from(formElement.querySelectorAll(inputSelector));
     const submitButton = formElement.querySelector(submitButtonSelector);
-    setEventListeners(formElement, inputs, submitButton, rest);
+    const addButton = document.querySelector(addButtonSelector);
+    const editButton = document.querySelector(editButtonSelector);
+    setEventListeners(formElement, inputs, submitButton, addButton, editButton, rest);
   });
 }
 
