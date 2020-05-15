@@ -27,11 +27,11 @@
       <div class="profile__user-info">
         <div class="profile__row">
           <h1 class="profile__user-name">Жак-Ив Кусто</h1>
-          <button type="button" class="profile__edit-button"></button>
+          <button type="button" class="profile__edit-button" data-button="edit"></button>
         </div>
         <p class="profile__user-profession">Исследователь океана</p>
       </div>
-      <button type="button" class="profile__add-button"></button>
+      <button type="button" class="profile__add-button" data-button="add"></button>
     </section>
     <section class="elements">
       <template id="card">
@@ -60,7 +60,7 @@
     <div class="popup__container popup__container_type_form">
       <button type="button" class="popup__close-icon"></button>
       <h2 class="form__title">Редактировать профиль</h2>
-      <form action="#" class="form" id="editForm" method="get" novalidate>
+      <form action="#" class="form" id="editForm" data-form="edit" method="get" novalidate>
         <label class="form__label">
           <input class="form__input" type="text" name="name" placeholder="Ваше имя" minlength="2" maxlength="40"
                  required pattern="^\S[а-яёА-ЯЁa-zA-Z-\s]*" id="name-input">
@@ -79,7 +79,7 @@
     <div class="popup__container popup__container_type_form">
       <button type="button" class="popup__close-icon"></button>
       <h2 class="form__title">Новое место</h2>
-      <form action="#" class="form" id="addForm" method="get" novalidate>
+      <form action="#" class="form" id="addForm" data-form="add" method="get" novalidate>
         <label class="form__label">
           <input class="form__input" type="text" name="imgName" placeholder="Название" minlength="1" maxlength="30"
                  required id="imgName-input" pattern="^\S[а-яёА-ЯЁa-zA-Z0-9-\s]+">
@@ -89,7 +89,8 @@
           <input class="form__input" type="url" name="link" placeholder="Ссылка на картинку" required id="link-input">
           <span class="form__input-error" id="link-input-error"></span>
         </label>
-        <input class="form__submit-button form__submit-button_inactive" type="submit" name="submit" value="Создать">
+        <input class="form__submit-button form__submit-button_inactive" type="submit" name="submit"
+               value="Создать">
       </form>
     </div>
   </div>

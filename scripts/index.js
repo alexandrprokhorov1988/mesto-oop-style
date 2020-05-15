@@ -175,7 +175,6 @@ popupEditButton.addEventListener('click', () => {
   setCloseEvents();
 });
 popupAddButton.addEventListener('click', () => {
-  resetInputs(imgInput, linkInput);
   togglePopup(addPopup);
   setCloseEvents();
 });
