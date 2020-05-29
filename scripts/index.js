@@ -1,3 +1,6 @@
+import {Card} from './Card.js';
+import {FormValidator} from './FormValidator.js';
+
 const initialCards = [
   {
     name: 'Дорога',
@@ -30,6 +33,25 @@ const initialCards = [
     alt: 'Калитка.',
   }
 ];
+
+const validation = {
+  formSelector: '.form',
+  inputSelector: '.form__input',
+  submitButtonSelector: '.form__submit-button',
+  inactiveButtonClass: 'form__submit-button_inactive',
+  inputErrorClass: 'form__input_type_error',
+  errorClass: 'form__input-error_visible'
+};
+
+const cardObj = {
+  cardSelector: 'card',
+  cardTitleClass: 'card__title',
+  cardImgClass: 'card__img',
+  cardDeleteButtonClass: 'card__delete',
+  cardLikeButtonClass: 'card__like',
+  cardLikeActiveClass: 'card__like_active',
+};
+
 const popupEditButton = document.querySelector('.profile__edit-button');
 const popupAddButton = document.querySelector('.profile__add-button');
 const nameInput = document.querySelector('[name=name]');
@@ -42,47 +64,15 @@ const editForm = document.querySelector('#editForm');
 const addForm = document.querySelector('#addForm');
 const editPopup = document.querySelector('#editPopup');
 const addPopup = document.querySelector('#addPopup');
-const sectionElement = document.querySelector('.elements');
 const imgPopup = document.querySelector('#imgPopup');
 const img = imgPopup.querySelector('.popup__image');
 const imgTitle = imgPopup.querySelector('.popup__image-title');
 const allPopups = Array.from(document.querySelectorAll('.popup'));
-const card = document.querySelector('#card').content;
 const popupOpenClass = 'popup_opened';
-const cardTitleClass = 'card__title';
 const popupNameClass = 'popup';
 const closeIconClass = 'popup__close-icon';
-const cardImgClass = 'card__img';
 const cardClass = 'card';
-const cardDeleteClass = 'card__delete';
-const cardLikeClass = 'card__like';
-const cardLikeActiveClass = 'card__like_active';
-
-const cloneCards = (name, link, alt = 'Картинка.') => {
-  const cardElement = card.cloneNode(true);
-  const cardImg = cardElement.querySelector(`.${cardImgClass}`);
-  const cardTitle = cardElement.querySelector(`.${cardTitleClass}`);
-  cardImg.src = link;
-  cardImg.alt = alt;
-  cardTitle.textContent = name;
-  return cardElement;
-};
-
-const removeCard = (e) => {
-  if (e.target.classList.contains(cardDeleteClass)) {
-    e.target.closest(`.${cardClass}`).remove();
-  }
-};
-
-const changeLike = (e) => {
-  if (e.target.classList.contains(cardLikeClass)) {
-    e.target.classList.toggle(cardLikeActiveClass);
-  }
-};
-
-const renderCard = (parentNode, childNode) => {
-  parentNode.prepend(childNode);
-};
+const sectionElement = document.querySelector('.elements');
 
 const togglePopup = (element) => {
   element.classList.toggle(popupOpenClass);
@@ -110,7 +100,7 @@ const setCloseEvents = () => {
   document.addEventListener('keydown', closePopupKey);
 };
 
-const showImgPopup = (e) => {
+const showImgPopup = ({cardImgClass, cardTitleClass}, e) => {
   if (e.target.classList.contains(cardImgClass)) {
     img.src = e.target.src;
     imgTitle.textContent = e.target.closest(`.${cardClass}`).querySelector(`.${cardTitleClass}`).textContent;
@@ -138,9 +128,18 @@ const resetInputs = (imgInput, linkInput) => {
   linkInput.value = '';
 };
 
+const renderCard = (parentNode, childNode) => {
+  parentNode.prepend(childNode);
+};
+
 const formSubmitHandlerAdd = (event) => {
   event.preventDefault();
-  renderCard(sectionElement, cloneCards(imgInput.value, linkInput.value));
+  const obj = {
+    name: imgInput.value,
+    link: linkInput.value
+  };
+  const card = new Card(cardObj, obj).generateCard();
+  renderCard(sectionElement, card);
   resetInputs(imgInput, linkInput);
   closePopup();
   removeCloseEvents();
@@ -160,8 +159,9 @@ const setButtonCloseEvents = () => {
 };
 
 const showCards = () => {
-  initialCards.forEach(({name, link, alt}) => {
-    renderCard(sectionElement, cloneCards(name, link, alt));
+  initialCards.forEach((elem) => {
+    const card = new Card(cardObj, elem).generateCard();
+    renderCard(sectionElement, card);
   });
 };
 
@@ -180,6 +180,18 @@ popupAddButton.addEventListener('click', () => {
 });
 editForm.addEventListener('submit', formSubmitHandlerEdit);
 addForm.addEventListener('submit', formSubmitHandlerAdd);
-sectionElement.addEventListener('click', changeLike);
-sectionElement.addEventListener('click', removeCard);
-sectionElement.addEventListener('click', showImgPopup);
+sectionElement.addEventListener('click', (e) => {
+  showImgPopup(cardObj, e);
+});
+
+function runValidation({formSelector}) {
+  const forms = Array.from(document.querySelectorAll(formSelector));
+  forms.forEach((formElement) => {
+    new FormValidator(validation, formElement).enableValidation();
+  });
+}
+
+runValidation(validation);
+
+
+
