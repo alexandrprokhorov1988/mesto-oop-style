@@ -88,7 +88,7 @@ const closePopup = () => {
 const closePopupKey = (event) => {
   if (event.key === 'Escape') {
     closePopup();
-    document.removeEventListener('keydown', closePopupKey);
+    removeCloseEvents();
   }
 };
 
@@ -134,11 +134,11 @@ const renderCard = (parentNode, childNode) => {
 
 const formSubmitHandlerAdd = (event) => {
   event.preventDefault();
-  const obj = {
+  const itemObj = {
     name: imgInput.value,
     link: linkInput.value
   };
-  const card = new Card(cardObj, obj).generateCard();
+  const card = new Card(cardObj, itemObj).generateCard();
   renderCard(sectionElement, card);
   resetInputs(imgInput, linkInput);
   closePopup();
