@@ -1,19 +1,18 @@
-export {Card};
-
-class Card {
-  constructor(cardObj, itemObj) {
-    this._card = cardObj.cardSelector;
-    this._cardTitleClass = cardObj.cardTitleClass;
-    this._cardImgClass = cardObj.cardImgClass;
-    this._cardDeleteButtonClass = cardObj.cardDeleteButtonClass;
-    this._cardLikeButtonClass = cardObj.cardLikeButtonClass;
-    this._cardLikeActiveClass = cardObj.cardLikeActiveClass;
-    this._name = itemObj.name;
-    this._link = itemObj.link;
-    this._alt = itemObj.alt || 'Картинка.';
+export default class Card {
+  constructor({cardSelectorsObj, cardItemObj, handleCardClick}) {
+    this._card = cardSelectorsObj.cardSelector;
+    this._cardTitleClass = cardSelectorsObj.cardTitleClass;
+    this._cardImgClass = cardSelectorsObj.cardImgClass;
+    this._cardDeleteButtonClass = cardSelectorsObj.cardDeleteButtonClass;
+    this._cardLikeButtonClass = cardSelectorsObj.cardLikeButtonClass;
+    this._cardLikeActiveClass = cardSelectorsObj.cardLikeActiveClass;
+    this._name = cardItemObj.name || cardItemObj.imgName;
+    this._link = cardItemObj.link;
+    this._alt = cardItemObj.alt || 'Картинка.';
+    this._handleCardClick = handleCardClick;
   }
 
-  _getTemplate() {
+  _getTemplate = () => {
     const cardTemplate = document.querySelector(`#${this._card}`).content;
     return cardTemplate.querySelector(`.${this._card}`).cloneNode(true);
   };
@@ -31,6 +30,9 @@ class Card {
     this._like.addEventListener('click', this._likeEvent);
     this._delete = this._element.querySelector(`.${this._cardDeleteButtonClass}`);
     this._delete.addEventListener('click', this._deleteEvent);
+
+    this._element.querySelector(`.${this._cardImgClass}`).addEventListener('click', this._handleCardClick);
+
   };
 
   _setAttributes = () => {
