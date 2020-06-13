@@ -1,10 +1,10 @@
-import './pages/index.css';
-import Card from './Card.js';
-import Section from './Section.js';
-import PopupWithImage from "./PopupWithImage.js";
-import PopupWithForm from "./PopupWithForm.js";
-import FormValidator from "./FormValidator.js";
-import UserInfo from "./UserInfo.js";
+import '../pages/index.css';
+import Card from '../components/Card.js';
+import Section from '../components/Section.js';
+import PopupWithImage from "../components/PopupWithImage.js";
+import PopupWithForm from "../components/PopupWithForm.js";
+import FormValidator from "../components/FormValidator.js";
+import UserInfo from "../components/UserInfo.js";
 
 import {
   cardSelectorsObj,
@@ -18,7 +18,7 @@ import {
   userInfoSelector,
   userNameSelector,
   validation
-} from './constants.js';
+} from '../utils/constants.js';
 
 const defaultCardList = new Section(
   {
