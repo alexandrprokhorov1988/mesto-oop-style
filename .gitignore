@@ -54,9 +54,7 @@ crashlytics-build.properties
 fabric.properties
 
 # Editor-based Rest Client
-.idea/httpRequests'.idea' 
-'.idea' 
+.idea/httpRequests'.idea'
 '.idea'
-
 node_modules
 dist
