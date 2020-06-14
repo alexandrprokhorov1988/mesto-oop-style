@@ -20,7 +20,14 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        loader:  [MiniCssExtractPlugin.loader, 'css-loader'],
+        loader: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {importLoaders: 1}
+          },
+          'postcss-loader'
+        ],
       },
       {
         test: /\.js$/,
@@ -29,12 +36,11 @@ module.exports = {
       }
     ],
   },
-    plugins: [
-  new HtmlWebpackPlugin({
-    template: './src/index.html',
-    favicon: './src/favicon.ico'
-  }),
-  new MiniCssExtractPlugin()
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      favicon: './src/favicon.ico'
+    }),
+    new MiniCssExtractPlugin()
   ],
-
 };
