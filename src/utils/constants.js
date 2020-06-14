@@ -1,32 +1,39 @@
+import road from '../images/card-winter-6.jpg';
+import home from '../images/card-winter-5.jpg';
+import three from '../images/card-winter-4.jpg';
+import pond from '../images/card-winter-3.jpg';
+import sun from '../images/card-winter-2.jpg';
+import gate from '../images/card-winter-1.jpg';
+
 export const initialCards = [
   {
     name: 'Дорога',
-    link: 'images/card-winter-6.jpg',
+    link: road,
     alt: 'Дорога.',
   },
   {
     name: 'Дом',
-    link: 'images/card-winter-5.jpg',
+    link: home,
     alt: 'Дом.',
   },
   {
     name: 'Деревья',
-    link: 'images/card-winter-4.jpg',
+    link: three,
     alt: 'Деревья.',
   },
   {
     name: 'Пруд',
-    link: 'images/card-winter-3.jpg',
+    link: pond,
     alt: 'Пруд под снегом.',
   },
   {
     name: 'Солнце',
-    link: 'images/card-winter-2.jpg',
+    link: sun,
     alt: 'Дорога в снегу.',
   },
   {
     name: 'Калитка',
-    link: 'images/card-winter-1.jpg',
+    link: gate,
     alt: 'Калитка.',
   }
 ];

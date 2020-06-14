@@ -17,19 +17,23 @@ export default class Card {
     return cardTemplate.querySelector(`.${this._card}`).cloneNode(true);
   };
 
-  _deleteEvent(e) {
-    e.target.closest(`.${this._card}`).remove();
+  _deleteEvent(event) {
+    event.target.closest(`.${this._card}`).remove();
   };
 
-  _likeEvent(e) {
-    e.target.classList.toggle(`${this._cardLikeActiveClass}`);
+  _likeEvent(event) {
+    event.target.classList.toggle(`${this._cardLikeActiveClass}`);
   };
 
   _setEvents() {
     this._like = this._element.querySelector(`.${this._cardLikeButtonClass}`);
-    this._like.addEventListener('click', this._likeEvent);
+    this._like.addEventListener('click', (event)=>{
+      this._likeEvent(event);
+    });
     this._delete = this._element.querySelector(`.${this._cardDeleteButtonClass}`);
-    this._delete.addEventListener('click', this._deleteEvent);
+    this._delete.addEventListener('click', (event)=>{
+      this._deleteEvent(event);
+    });
 
     this._element.querySelector(`.${this._cardImgClass}`).addEventListener('click', this._handleCardClick);
 

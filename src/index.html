@@ -62,12 +62,12 @@
       <form action="#" class="form" id="editForm" data-form="edit" method="get" novalidate>
         <label class="form__label">
           <input class="form__input" type="text" name="name" placeholder="Ваше имя" minlength="2" maxlength="40"
-                 required pattern="^\S[а-яёА-ЯЁa-zA-Z-\s]+$" id="name-input">
+                 required pattern="^[а-яёА-ЯЁa-zA-Z-\s]+$" id="name-input">
           <span class="form__input-error" id="name-input-error"></span>
         </label>
         <label class="form__label">
           <input class="form__input" type="text" name="profession" placeholder="Ваша профессия" minlength="2"
-                 maxlength="200" required id="profession-input" pattern="^\S[а-яёА-ЯЁa-zA-Z0-9-\s]+">
+                 maxlength="200" required id="profession-input" pattern="^[а-яёА-ЯЁa-zA-Z0-9-\s]+$">
           <span class="form__input-error" id="profession-input-error"></span>
         </label>
         <input class="form__submit-button" type="submit" name="submit" value="Сохранить">
@@ -81,7 +81,7 @@
       <form action="#" class="form" id="addForm" data-form="add" method="get" novalidate>
         <label class="form__label">
           <input class="form__input" type="text" name="imgName" placeholder="Название" minlength="1" maxlength="30"
-                 required id="imgName-input" pattern="^\S[а-яёА-ЯЁa-zA-Z0-9-\s]+">
+                 required id="imgName-input" pattern="^[а-яёА-ЯЁa-zA-Z0-9-\s]+$">
           <span class="form__input-error" id="imgName-input-error"></span>
         </label>
         <label class="form__label">

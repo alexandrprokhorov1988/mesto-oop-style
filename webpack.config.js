@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2)$/i,
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ico)$/i,
         loader: 'file-loader',
       },
       {
@@ -31,7 +31,8 @@ module.exports = {
   },
     plugins: [
   new HtmlWebpackPlugin({
-    template: './src/index.html'
+    template: './src/index.html',
+    favicon: './src/favicon.ico'
   }),
   new MiniCssExtractPlugin()
   ],
