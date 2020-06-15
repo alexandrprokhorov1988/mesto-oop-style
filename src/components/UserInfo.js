@@ -14,8 +14,8 @@ export default class UserInfo {
   }
 
   setUserInfo(obj) {
-    this._userNameSelector.textContent = obj[0].name;
-    this._userInfoSelector.textContent = obj[0].profession;
+    this._userNameSelector.textContent = obj.name;
+    this._userInfoSelector.textContent = obj.profession;
   }
 
   setUserInfoToForm(obj) {

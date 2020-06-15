@@ -1,4 +1,4 @@
-import '../pages/index.css';
+import './index.css';
 import Card from '../components/Card.js';
 import Section from '../components/Section.js';
 import PopupWithImage from "../components/PopupWithImage.js";
@@ -20,6 +20,7 @@ import {
   validation
 } from '../utils/constants.js';
 
+const popImg = new PopupWithImage(popupImgObj);
 const defaultCardList = new Section(
   {
     itemsObj: initialCards,
@@ -29,7 +30,6 @@ const defaultCardList = new Section(
           cardSelectorsObj: cardSelectorsObj,
           cardItemObj: cardItemObj,
           handleCardClick: (e) => {
-            const popImg = new PopupWithImage(popupImgObj);
             popImg.open(e);
           }
         });
@@ -65,7 +65,6 @@ const addPopup = new PopupWithForm(
                 cardSelectorsObj: cardSelectorsObj,
                 cardItemObj: cardItemObj,
                 handleCardClick: (e) => {
-                  const popImg = new PopupWithImage(popupImgObj);
                   popImg.open(e);
                 }
               });
@@ -84,6 +83,7 @@ const runValidation = ({formSelector}) => {
   });
 };
 
+popImg.setEvents();
 editPopup.setEvents();
 addPopup.setEvents();
 defaultCardList.renderer();

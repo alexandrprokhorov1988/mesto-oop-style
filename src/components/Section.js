@@ -10,8 +10,12 @@ export default class Section {
   }
 
   renderer() {
-    this._itemsObj.forEach(item => {
-      this._rendererFunction(item);
-    });
+    if (!Array.isArray(this._itemsObj)) {
+      this._rendererFunction(this._itemsObj);
+    } else {
+      this._itemsObj.forEach(item => {
+        this._rendererFunction(item);
+      });
+    }
   }
 }
