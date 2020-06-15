@@ -16,7 +16,6 @@ export default class PopupWithImage extends Popup {
       this._title.textContent = event.target.closest(`.${this._cardClass}`).querySelector(`.${this._cardTitleClass}`).textContent;
       this._img.alt = event.target.alt;
       super.open();
-      super._setEventListeners();
     }
-  };
+  }
 }
