@@ -19,6 +19,7 @@ export default class Card {
 
   _deleteEvent(event) {
     event.target.closest(`.${this._card}`).remove();
+    this._card = null;
   };
 
   _likeEvent(event) {
@@ -27,16 +28,14 @@ export default class Card {
 
   _setEvents() {
     this._like = this._element.querySelector(`.${this._cardLikeButtonClass}`);
-    this._like.addEventListener('click', (event)=>{
+    this._like.addEventListener('click', (event) => {
       this._likeEvent(event);
     });
     this._delete = this._element.querySelector(`.${this._cardDeleteButtonClass}`);
-    this._delete.addEventListener('click', (event)=>{
+    this._delete.addEventListener('click', (event) => {
       this._deleteEvent(event);
     });
-
     this._element.querySelector(`.${this._cardImgClass}`).addEventListener('click', this._handleCardClick);
-
   };
 
   _setAttributes() {
