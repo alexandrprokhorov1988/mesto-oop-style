@@ -23,7 +23,7 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         loader: [
           MiniCssExtractPlugin.loader,
           {
