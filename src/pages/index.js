@@ -5,40 +5,53 @@ import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import FormValidator from "../components/FormValidator.js";
 import UserInfo from "../components/UserInfo.js";
+import Api from "../components/Api.js";
 
 import {
   cardSelectorsObj,
   initialCards,
   jobInput,
   nameInput,
+  options,
   popupAddButton,
   popupEditButton,
   popupImgObj,
   sectionElement,
+  userAvatarSelector,
   userInfoSelector,
   userNameSelector,
   validation
 } from '../utils/constants.js';
 
-const popImg = new PopupWithImage(popupImgObj);
-const defaultCardList = new Section(
-  {
-    itemsObj: initialCards,
-    rendererFunction: (cardItemObj) => {
-      const card = new Card(
-        {
-          cardSelectorsObj: cardSelectorsObj,
-          cardItemObj: cardItemObj,
-          handleCardClick: (e) => {
-            popImg.open(e);
-          }
-        });
-      const cardElement = card.generateCard();
-      defaultCardList.addItem(cardElement);
-    }
-  }, sectionElement);
+const api = new Api(options);
 
-const userInfo = new UserInfo(userNameSelector, userInfoSelector, jobInput, nameInput);
+const popImg = new PopupWithImage(popupImgObj);
+
+api.getInitialCards()
+  .then((result) => {
+    const defaultCardList = new Section(
+      {
+        itemsObj: result,
+        rendererFunction: (cardItemObj) => {
+          const card = new Card(
+            {
+              cardSelectorsObj: cardSelectorsObj,
+              cardItemObj: cardItemObj,
+              handleCardClick: (e) => {
+                popImg.open(e);
+              }
+            });
+          const cardElement = card.generateCard();
+          defaultCardList.addItem(cardElement);
+        }
+      }, sectionElement);
+    defaultCardList.renderer();
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+const userInfo = new UserInfo(userNameSelector, userInfoSelector, userAvatarSelector, jobInput, nameInput);
 
 const editPopup = new PopupWithForm(
   {
@@ -46,7 +59,13 @@ const editPopup = new PopupWithForm(
     formSelector: '#editForm',
     formInputSelector: '.form__input',
     submitFormFunction: (userObj) => {
-      userInfo.setUserInfo(userObj);
+      // userInfo.setUserInfo(userObj);//todo
+      api.setUserInfo(userObj);
+      api.getUserInfo()
+        .then(res => {
+          userInfo.setUserInfo(res);
+        })
+        .catch(err => console.log(err));
     }
   });
 
@@ -83,10 +102,11 @@ const runValidation = ({formSelector}) => {
   });
 };
 
+
 popImg.setEvents();
 editPopup.setEvents();
 addPopup.setEvents();
-defaultCardList.renderer();
+// defaultCardList.renderer();
 popupEditButton.addEventListener('click', () => {
   userInfo.setUserInfoToForm(userInfo.getUserInfo());
   editPopup.open();
@@ -95,3 +115,17 @@ popupAddButton.addEventListener('click', () => {
   addPopup.open();
 });
 runValidation(validation);
+
+
+api.getUserInfo()
+  .then(res => {
+    userInfo.setUserInfo(res);
+  })
+  .catch(err => console.log(err));
+
+
+api.setNewCard('счмчс', 'https://pbs.twimg.com/profile_images/703895598190047232/N4njoMMW_400x400.jpg')
+  .then(res => {
+      console.log(res);
+  })
+  .catch(err => console.log(err));

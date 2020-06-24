@@ -6,15 +6,18 @@ export default class Card {
     this._cardDeleteButtonClass = cardSelectorsObj.cardDeleteButtonClass;
     this._cardLikeButtonClass = cardSelectorsObj.cardLikeButtonClass;
     this._cardLikeActiveClass = cardSelectorsObj.cardLikeActiveClass;
+    this._cardLikeCounterClass =  cardSelectorsObj.cardLikeCounterClass;
     this._name = cardItemObj.name || cardItemObj.imgName;
     this._link = cardItemObj.link;
+    this._id = cardItemObj._id;
+    this._likeCount = cardItemObj.likes.length;
     this._alt = cardItemObj.alt || 'Картинка.';
     this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
     const cardTemplate = document.querySelector(`#${this._card}`).content;
-    return cardTemplate.querySelector(`.${this._card}`).cloneNode(true);
+    return cardTemplate.cloneNode(true);
   };
 
   _deleteEvent(event) {
@@ -41,9 +44,12 @@ export default class Card {
   _setAttributes() {
     const cardImg = this._element.querySelector(`.${this._cardImgClass}`);
     const cardTitle = this._element.querySelector(`.${this._cardTitleClass}`);
+    const cardLikeCounter = this._element.querySelector(`.${this._cardLikeCounterClass}`);
     cardImg.src = this._link;
     cardImg.alt = this._alt;
     cardTitle.textContent = this._name;
+    cardLikeCounter.textContent = this._likeCount;
+    cardImg.id = this._id;
   };
 
   generateCard() {

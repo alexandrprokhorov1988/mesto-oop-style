@@ -5,6 +5,9 @@
 @import url(./__user-profession/profile__user-profession.css);
 @import url(./__user-info/profile__user-info.css);
 @import url(./__row/profile__row.css);
+@import url(./__avatar-edit-button/profile__avatar-edit-button.css);
+@import url(./__avatar-container/profile__avatar-container.css);
+@import url(./__bg/profile__bg.css);
 
 .profile {
   margin: 0 auto;
