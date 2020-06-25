@@ -109,21 +109,21 @@
     <!--</div>-->
   <!--</div>-->
 
-  <!--<div class="popup popup_type_form" id="editAvatarPopup">-->
-    <!--<div class="popup__container popup__container_type_form-avatar">-->
-      <!--<button type="button" class="popup__close-icon"></button>-->
-      <!--<h2 class="form__title">Обновить аватар</h2>-->
-      <!--<form action="#" class="form" id="editAvatarForm" data-form="add" method="get" novalidate>-->
-        <!--<label class="form__label">-->
-          <!--<input class="form__input" type="url" name="avatarUrl" placeholder="Ссылка на аватар" required-->
-                 <!--id="avatar-link-input">-->
-          <!--<span class="form__input-error" id="avatarUrl-input-error"></span>-->
-        <!--</label>-->
-        <!--<input class="form__submit-button form__submit-button_inactive" type="submit" name="submit"-->
-               <!--value="Сохранить">-->
-      <!--</form>-->
-    <!--</div>-->
-  <!--</div>-->
+  <div class="popup popup_type_form" id="editAvatarPopup">
+    <div class="popup__container popup__container_type_form-avatar">
+      <button type="button" class="popup__close-icon"></button>
+      <h2 class="form__title">Обновить аватар</h2>
+      <form action="#" class="form" id="editAvatarForm" data-form="editAvatar" method="get" novalidate>
+        <label class="form__label">
+          <input class="form__input" type="url" name="avatarUrl" placeholder="Ссылка на аватар" required
+                 id="avatarUrl-input">
+          <span class="form__input-error" id="avatarUrl-input-error"></span>
+        </label>
+        <input class="form__submit-button form__submit-button_inactive" type="submit" name="submit"
+               value="Сохранить">
+      </form>
+    </div>
+  </div>
 
 </div>
 </body>

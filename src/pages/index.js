@@ -19,12 +19,14 @@ import {
   userAvatarSelector,
   userInfoSelector,
   userNameSelector,
-  validation
+  validation,
+  popupAvatarEditButton
 } from '../utils/constants.js';
 
 const api = new Api(options);
 
 const popImg = new PopupWithImage(popupImgObj);
+// const deletePopup = new PopupWithForm();
 
 api.getInitialCards()
   .then((result) => {
@@ -38,7 +40,7 @@ api.getInitialCards()
             handleCardClick: (e) => {
               popImg.open(e);
             },
-            handleCardDeleteClick: (e)=>{
+            handleCardDeleteClick: (e) => {
               api.deleteCard(e);
             }
           });
@@ -60,8 +62,7 @@ const editPopup = new PopupWithForm(
     formSelector: '#editForm',
     formInputSelector: '.form__input',
     submitFormFunction: (userObj) => {
-      api.setUserInfo(userObj);
-      api.getUserInfo()
+      api.setUserInfo(userObj)
         .then(res => {
           userInfo.setUserInfo(res);
         })
@@ -98,6 +99,22 @@ const addPopup = new PopupWithForm(
     }
   });
 
+
+const editAvatarPopup = new PopupWithForm(
+  {
+    popupSelector: '#editAvatarPopup',
+    formSelector: '#editAvatarForm',
+    formInputSelector: '.form__input',
+    submitFormFunction: (itemObj) => {
+      api.setUserAvatar(itemObj)
+        .then(res => {
+          userInfo.setUserInfo(res);
+        })
+        .catch(err => console.log(err));
+    }
+  });
+
+
 const runValidation = ({formSelector}) => {
   const forms = Array.from(document.querySelectorAll(formSelector));
   forms.forEach((formElement) => {
@@ -109,6 +126,8 @@ const runValidation = ({formSelector}) => {
 popImg.setEvents();
 editPopup.setEvents();
 addPopup.setEvents();
+editAvatarPopup.setEvents();
+// deletePopup.setEvents();
 popupEditButton.addEventListener('click', () => {
   userInfo.setUserInfoToForm(userInfo.getUserInfo());
   editPopup.open();
@@ -116,6 +135,12 @@ popupEditButton.addEventListener('click', () => {
 popupAddButton.addEventListener('click', () => {
   addPopup.open();
 });
+
+popupAvatarEditButton.addEventListener('click', ()=>{
+  editAvatarPopup.open();
+});
+
+
 runValidation(validation);
 
 api.getUserInfo()

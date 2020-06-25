@@ -75,6 +75,7 @@ export const options = {
 
 export const popupEditButton = document.querySelector('.profile__edit-button');
 export const popupAddButton = document.querySelector('.profile__add-button');
+export const popupAvatarEditButton = document.querySelector('.profile__avatar-edit-button');
 export const nameInput = document.querySelector('[name=name]');
 export const jobInput = document.querySelector('[name=about]');
 export const userAvatarSelector = document.querySelector('.profile__avatar');

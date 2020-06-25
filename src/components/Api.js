@@ -43,6 +43,11 @@ export default class Api {
         name: name,
         about: about
       })
+    }).then(res => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Ошибка: ${res.status}`);
     });
   }
 
@@ -85,7 +90,7 @@ export default class Api {
       })
   }
 
-  likeeCard(cardId) {
+  likeCard(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
       headers: {
@@ -102,5 +107,23 @@ export default class Api {
         }
         return Promise.reject(`Ошибка: ${res.status}`);
       })
+  }
+
+  setUserAvatar({avatarUrl}) {
+    return fetch(`${this._baseUrl}/users/me/avatar`, {
+      method: 'PATCH',
+      headers: {
+        authorization: this._autorization,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        avatar: avatarUrl
+      })
+    }).then(res => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Ошибка: ${res.status}`);
+    })
   }
 }

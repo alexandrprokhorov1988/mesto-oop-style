@@ -10,7 +10,6 @@ export default class Card {
     this._name = cardItemObj.name || cardItemObj.imgName;
     this._link = cardItemObj.link;
     this._id = cardItemObj._id;
-    console.log(cardItemObj);
     this._owner = cardItemObj.owner._id;
     this._likeCount = cardItemObj.likes.length;
     this._alt = cardItemObj.alt || 'Картинка.';
