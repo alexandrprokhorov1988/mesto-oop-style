@@ -52,7 +52,8 @@ export const cardSelectorsObj = {
   cardDeleteButtonClass: 'card__delete',
   cardLikeButtonClass: 'card__like',
   cardLikeActiveClass: 'card__like_active',
-  cardLikeCounterClass: 'card__like-counter'
+  cardLikeCounterClass: 'card__like-counter',
+  userIdSelector: 'profile__user-name'
 };
 
 export const popupImgObj = {

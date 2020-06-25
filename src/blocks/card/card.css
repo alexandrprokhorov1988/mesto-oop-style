@@ -4,6 +4,7 @@
 @import url(../card/__info/card__info.css);
 @import url(../card/__delete/card__delete.css);
 @import url(../card/__like-counter/card__like-counter.css);
+@import url(../card/__delete/_active/card__delete_active.css);
 
 .card {
   max-height: 361px;

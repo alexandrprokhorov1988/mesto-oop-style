@@ -18,6 +18,7 @@ export default class UserInfo {
   setUserInfo(obj) {
     this._userNameSelector.textContent = obj.name;
     this._userInfoSelector.textContent = obj.about;
+    this._userNameSelector.id = obj._id;
     this._userAvatarSelector.src = obj.avatar;
   }
 

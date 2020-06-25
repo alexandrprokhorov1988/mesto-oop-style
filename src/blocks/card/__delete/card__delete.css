@@ -15,6 +15,7 @@
   position: absolute;
   top: 18px;
   right: 15px;
+  display: none;
 }
 
 .card__delete:hover {

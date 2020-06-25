@@ -46,7 +46,7 @@ export default class Api {
     });
   }
 
-  setNewCard(name, link){
+  setNewCard({name, link}) {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
       headers: {
@@ -59,10 +59,48 @@ export default class Api {
       })
     })
       .then(res => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
+        if (res.ok) {
+          return res.json();
+        }
+        return Promise.reject(`Ошибка: ${res.status}`);
+      })
+  }
+
+  deleteCard(cardId) {
+    return fetch(`${this._baseUrl}/cards/${cardId}`, {
+      method: 'DELETE',
+      headers: {
+        authorization: this._autorization,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        _id: cardId
+      })
     })
+      .then(res => {
+        if (res.ok) {
+          console.log(`Карточка с id: ${cardId} удалена`);
+        }
+        return Promise.reject(`Ошибка: ${res.status}`);
+      })
+  }
+
+  likeeCard(cardId) {
+    return fetch(`${this._baseUrl}/cards/${cardId}`, {
+      method: 'DELETE',
+      headers: {
+        authorization: this._autorization,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        _id: cardId
+      })
+    })
+      .then(res => {
+        if (res.ok) {
+          console.log(`Карточка сid: ${cardId} лайкнута`);
+        }
+        return Promise.reject(`Ошибка: ${res.status}`);
+      })
   }
 }
