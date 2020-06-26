@@ -26,8 +26,4 @@ export default class UserInfo {
     this._nameInput.value = obj.name;
     this._jobInput.value = obj.about;
   }
-
-  setAvatar(obj){
-
-  }
 }

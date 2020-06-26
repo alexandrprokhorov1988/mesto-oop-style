@@ -24,7 +24,7 @@
       <div class="profile__avatar-container">
         <img src="#" alt="Аватар." class="profile__avatar">
         <div class="profile__bg">
-          <button type="button" class="profile__avatar-edit-button"></button>
+          <button type="button" class="profile__avatar-edit-button" data-button="editAvatar"></button>
         </div>
       </div>
       <div class="profile__user-info">
@@ -101,13 +101,27 @@
     </div>
   </div>
 
+  <!--<div class="popup popup_type_form" id="deletePopup">-->
+    <!--<div class="popup__container popup__container_type_form-confirm">-->
+      <!--<button type="button" class="popup__close-icon"></button>-->
+      <!--<h2 class="form__title">Вы уверены?</h2>-->
+      <!--<button class="form__submit-button form__submit-button_type_confirm" type="button">Да</button>-->
+    <!--</div>-->
+  <!--</div>-->
+
+
   <div class="popup popup_type_form" id="deletePopup">
     <div class="popup__container popup__container_type_form-confirm">
       <button type="button" class="popup__close-icon"></button>
       <h2 class="form__title">Вы уверены?</h2>
-      <button class="form__submit-button form__submit-button_type_confirm" type="button">Да</button>
+      <form action="#" class="form" id="deleteForm" data-form="delete" method="get" novalidate>
+        <input class="form__submit-button" type="submit" name="submit"
+               value="Да">
+      </form>
     </div>
   </div>
+
+
 
   <div class="popup popup_type_form" id="editAvatarPopup">
     <div class="popup__container popup__container_type_form-avatar">
