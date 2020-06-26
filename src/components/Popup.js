@@ -44,4 +44,12 @@ export default class Popup {
   setEvents() {
     this._setEventListeners();
   };
+
+  // setButtonEvent() {
+  //   return new Promise((resolve, reject) => {
+  //     this._popup.querySelector('.form__submit-button').addEventListener('click', () => {
+  //       this._submitFunction();
+  //     })
+  //   })
+  // }
 }

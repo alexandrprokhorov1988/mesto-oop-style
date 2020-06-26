@@ -90,9 +90,15 @@ export default class Api {
       })
   }
 
-  likeCard(cardId) {
-    return fetch(`${this._baseUrl}/cards/${cardId}`, {
-      method: 'DELETE',
+  likeCard(cardId, isLiked) {
+    let method = '';
+    if (isLiked) {
+      method = 'DELETE';
+    } else {
+      method = 'PUT';
+    }
+    return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+      method: method,
       headers: {
         authorization: this._autorization,
         'Content-Type': 'application/json'
@@ -103,7 +109,8 @@ export default class Api {
     })
       .then(res => {
         if (res.ok) {
-          console.log(`Карточка сid: ${cardId} лайкнута`);
+          console.log(`Карточка с id: ${cardId}`);
+          return res.json();
         }
         return Promise.reject(`Ошибка: ${res.status}`);
       })

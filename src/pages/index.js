@@ -1,5 +1,6 @@
 import './index.css';
 import Card from '../components/Card.js';
+import Popup from '../components/Popup.js';
 import Section from '../components/Section.js';
 import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForm.js";
@@ -13,46 +14,19 @@ import {
   nameInput,
   options,
   popupAddButton,
+  popupAvatarEditButton,
   popupEditButton,
   popupImgObj,
   sectionElement,
   userAvatarSelector,
   userInfoSelector,
   userNameSelector,
-  validation,
-  popupAvatarEditButton
+  validation
 } from '../utils/constants.js';
 
 const api = new Api(options);
 
 const popImg = new PopupWithImage(popupImgObj);
-// const deletePopup = new PopupWithForm();
-
-api.getInitialCards()
-  .then((result) => {
-    const defaultCardList = new Section({
-      itemsObj: result,
-      rendererFunction: (cardItemObj) => {
-        const card = new Card(
-          {
-            cardSelectorsObj: cardSelectorsObj,
-            cardItemObj: cardItemObj,
-            handleCardClick: (e) => {
-              popImg.open(e);
-            },
-            handleCardDeleteClick: (e) => {
-              api.deleteCard(e);
-            }
-          });
-        const cardElement = card.generateCard();
-        defaultCardList.addItem(cardElement);
-      }
-    }, sectionElement);
-    defaultCardList.renderer();
-  })
-  .catch((err) => {
-    console.log(err);
-  });
 
 const userInfo = new UserInfo(userNameSelector, userInfoSelector, userAvatarSelector, jobInput, nameInput);
 
@@ -99,7 +73,6 @@ const addPopup = new PopupWithForm(
     }
   });
 
-
 const editAvatarPopup = new PopupWithForm(
   {
     popupSelector: '#editAvatarPopup',
@@ -114,6 +87,8 @@ const editAvatarPopup = new PopupWithForm(
     }
   });
 
+const deletePopup = new Popup('#deletePopup');
+
 
 const runValidation = ({formSelector}) => {
   const forms = Array.from(document.querySelectorAll(formSelector));
@@ -122,12 +97,53 @@ const runValidation = ({formSelector}) => {
   });
 };
 
+api.getInitialCards()
+  .then((result) => {
+    const defaultCardList = new Section({
+      itemsObj: result,
+      rendererFunction: (cardItemObj) => {
+        const card = new Card(
+          {
+            cardSelectorsObj: cardSelectorsObj,
+            cardItemObj: cardItemObj,
+            handleCardClick: (e) => {
+              popImg.open(e);
+            },
+            handleCardDeleteClick: (e) => {
+              deletePopup.open();
+              // api.deleteCard(e);
+            },
+            handleLikeDeleteClick: (e) => {
+              api.likeCard(e, true)
+                .then(res => {
+                  card.setLikes(res);
+                })
+                .catch(err => console.log(err));
+            },
+            handleLikeSetClick: (e) => {
+              api.likeCard(e, false)
+                .then(res => {
+                  card.setLikes(res);
+                })
+                .catch(err => console.log(err));
+            },
+          });
+        const cardElement = card.generateCard();
+        defaultCardList.addItem(cardElement);
+      }
+    }, sectionElement);
+    defaultCardList.renderer();
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 popImg.setEvents();
 editPopup.setEvents();
 addPopup.setEvents();
 editAvatarPopup.setEvents();
-// deletePopup.setEvents();
+deletePopup.setEvents();
+// deletePopup.setButtonEvent();
 popupEditButton.addEventListener('click', () => {
   userInfo.setUserInfoToForm(userInfo.getUserInfo());
   editPopup.open();
@@ -135,8 +151,7 @@ popupEditButton.addEventListener('click', () => {
 popupAddButton.addEventListener('click', () => {
   addPopup.open();
 });
-
-popupAvatarEditButton.addEventListener('click', ()=>{
+popupAvatarEditButton.addEventListener('click', () => {
   editAvatarPopup.open();
 });
 
