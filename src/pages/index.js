@@ -80,7 +80,7 @@ const addPopup = new PopupWithForm(
           item.renderer();
         })
         .catch(err => console.log(err))
-        .finally(() => editPopup.popupButtonLoadingText(false));
+        .finally(() => addPopup.popupButtonLoadingText(false));
     }
   });
 
@@ -95,7 +95,7 @@ const editAvatarPopup = new PopupWithForm(
           userInfo.setUserInfo(res);
         })
         .catch(err => console.log(err))
-        .finally(() => editPopup.popupButtonLoadingText(false));
+        .finally(() => editAvatarPopup.popupButtonLoadingText(false));
     }
   });
 
@@ -156,11 +156,10 @@ api.getInitialCards()
   .catch((err) => {
     console.log(err);
   });
-
+editAvatarPopup.setEvents();
 popImg.setEvents();
 editPopup.setEvents();
 addPopup.setEvents();
-editAvatarPopup.setEvents();
 deletePopup.setEvents();
 // deletePopup.setButtonEvent();
 popupEditButton.addEventListener('click', () => {

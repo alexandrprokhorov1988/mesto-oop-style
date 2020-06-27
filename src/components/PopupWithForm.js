@@ -6,6 +6,7 @@ export default class PopupWithForm extends Popup {
     this._element = document.querySelector(`${formSelector}`);
     this._formSubmitFunction = submitFormFunction;
     this._formInputSelector = formInputSelector;
+    this._oldValue = this._element.querySelector('.form__submit-button').value;
   }
 
   _getInputValues() {
@@ -19,11 +20,8 @@ export default class PopupWithForm extends Popup {
 
   _setEventListeners() {
     super._setEventListeners();
-    this._oldElementText = this._element.querySelector('.form__submit-button').value;
-    console.log(this._oldElementText);
     this._element.addEventListener('submit', (event) => {
       event.preventDefault();
-      console.log('submit');
       this.popupButtonLoadingText(true);
       this._formSubmitFunction(this._getInputValues());
       this.close();
@@ -38,13 +36,9 @@ export default class PopupWithForm extends Popup {
 
   popupButtonLoadingText(isLoading) {
     if (isLoading) {
-      console.log('work true');
-      console.log(this._oldElementText);
       this._element.querySelector('.form__submit-button').value = 'Сохранение...';
     } else {
-      console.log('work false');
-      console.log(this._oldElementText);
-      this._element.querySelector('.form__submit-button').value = this._oldElementText;
+      this._element.querySelector('.form__submit-button').value = this._oldValue;
     }
   }
 }
