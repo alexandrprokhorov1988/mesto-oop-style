@@ -18,6 +18,8 @@ export default class Card {
     this._handleCardDeleteClick = handleCardDeleteClick;
     this._userId = document.querySelector(`.${cardSelectorsObj.userIdSelector}`).id;
     this._ownerLike = cardItemObj.likes.some(e => e._id === this._userId);
+    // this._ownerLike = cardItemObj.likes.some(e => e._id === localStorage.getItem('userid'));
+
   }
 
   _getTemplate() {
@@ -26,15 +28,11 @@ export default class Card {
   };
 
 
-
   _deleteEvent(event) {
-    console.log(this._id);
-    this._handleCardDeleteClick(this._id, event);
-    console.log('if handle click');
-    event.target.closest(`.${this._card}`).remove();
-    this._card = null;
+    this._handleCardDeleteClick(this._id, this._card, event);
+    // event.target.closest(`.${this._card}`).remove();
+    // this._card = null;
   };
-
 
 
   _likeEvent(event) {
@@ -56,7 +54,8 @@ export default class Card {
     });
 
     if (this._userId === this._owner) {
-      this._delete = this._element.querySelector(`.${this._cardDeleteButtonClass}`);
+    // if (localStorage.getItem('userid') === this._owner) {
+    this._delete = this._element.querySelector(`.${this._cardDeleteButtonClass}`);
       this._delete.classList.add('card__delete_active');
       this._delete.addEventListener('click', (event) => {
         this._deleteEvent(event);

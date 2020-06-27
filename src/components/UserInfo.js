@@ -14,11 +14,11 @@ export default class UserInfo {
     return this._userInfoObj;
   }
 
-
   setUserInfo(obj) {
     this._userNameSelector.textContent = obj.name;
     this._userInfoSelector.textContent = obj.about;
     this._userNameSelector.id = obj._id;
+    // localStorage.setItem('userid', obj._id);
     this._userAvatarSelector.src = obj.avatar;
   }
 

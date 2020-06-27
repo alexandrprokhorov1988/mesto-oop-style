@@ -11,15 +11,19 @@ export default class PopupConfirm extends Popup {
     super._setEventListeners();
     this._button.addEventListener('click', (event) => {
       event.preventDefault();
-      console.log('click');
       this._confirmFunction(this._id);
+      document.querySelector(`[data-id=\"${this._id}\"]`).closest(`.${this._card}`).remove();
+      this._card = null;
       this.close();
     });
   };
 
-  open(id) {
+
+  set setId(id) {
     this._id = id;
-    super.open();
   }
 
+  set setCard(card) {
+    this._card = card;
+  }
 }

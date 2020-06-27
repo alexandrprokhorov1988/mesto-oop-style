@@ -63,8 +63,10 @@ const addPopup = new PopupWithForm(
                   handleCardClick: (e) => {
                     popImg.open(e);
                   },
-                  handleCardDeleteClick: (e) => {
-                    deletePopup.open();//todo
+                  handleCardDeleteClick: (id, card) => {
+                    confirmPopup.setId = id;
+                    confirmPopup.setCard = card;
+                    confirmPopup.open();
                   },
                   handleLikeSetClick: (id, isLiked) => {
                     api.likeCard(id, isLiked)
@@ -100,29 +102,11 @@ const editAvatarPopup = new PopupWithForm(
     }
   });
 
-// const deletePopup = new Popup('#deletePopup');
-
-
-// const deletePopup = new PopupWithForm(
-//   {
-//     popupSelector: '#deletePopup',
-//     formSelector: '#deleteForm',
-//     formInputSelector: null,
-//     submitFormFunction: (id) => { //todo
-//       api.deleteCard(id)
-//         .then(res => {
-//           console.log('удалено' + res);
-//         })
-//         .catch(err => console.log(err));
-//     }
-//   });
-
-
 const confirmPopup = new PopupConfirm(
   {
     popupSelector: '#confirmPopup',
     buttonSelector: '.form__submit-button',
-    confirmFunction: (id) => { //todo
+    confirmFunction: (id) => {
       api.deleteCard(id)
         .then(res => {
           console.log(res);
@@ -131,13 +115,18 @@ const confirmPopup = new PopupConfirm(
     }
   });
 
-
 const runValidation = ({formSelector}) => {
   const forms = Array.from(document.querySelectorAll(formSelector));
   forms.forEach((formElement) => {
     new FormValidator(validation, formElement).enableValidation();
   });
 };
+
+api.getUserInfo()
+  .then(res => {
+    userInfo.setUserInfo(res);
+  })
+  .catch(err => console.log(err));
 
 api.getInitialCards()
   .then((result) => {
@@ -151,9 +140,10 @@ api.getInitialCards()
             handleCardClick: (e) => {
               popImg.open(e);
             },
-            handleCardDeleteClick: (id, e) => {
-              // deletePopup.open();//todo
-              confirmPopup.open(id, e);
+            handleCardDeleteClick: (id, card) => {
+              confirmPopup.setId = id;
+              confirmPopup.setCard = card;
+              confirmPopup.open();
             },
             handleLikeSetClick: (id, isLiked) => {
               api.likeCard(id, isLiked)
@@ -172,13 +162,12 @@ api.getInitialCards()
   .catch((err) => {
     console.log(err);
   });
+
 editAvatarPopup.setEvents();
 popImg.setEvents();
 editPopup.setEvents();
 addPopup.setEvents();
 confirmPopup.setEvents();
-// deletePopup.setEvents();
-// deletePopup.setButtonEvent();
 popupEditButton.addEventListener('click', () => {
   userInfo.setUserInfoToForm(userInfo.getUserInfo());
   editPopup.open();
@@ -193,8 +182,3 @@ popupAvatarEditButton.addEventListener('click', () => {
 
 runValidation(validation);
 
-api.getUserInfo()
-  .then(res => {
-    userInfo.setUserInfo(res);
-  })
-  .catch(err => console.log(err));
