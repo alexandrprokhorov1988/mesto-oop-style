@@ -30,8 +30,8 @@ export default class Card {
     // const id = event.target.closest(`.${this._card}`).querySelector('.card__img').dataset.id;
     console.log(this._id);
     this._handleCardDeleteClick(this._id);
-    // event.target.closest(`.${this._card}`).remove();
-    // this._card = null;
+    event.target.closest(`.${this._card}`).remove();
+    this._card = null;
   };
 
   _likeEvent(event) {

@@ -3,6 +3,7 @@ import Card from '../components/Card.js';
 import Section from '../components/Section.js';
 import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForm.js";
+import PopupConfirm from "../components/PopupConfirm.js";
 import FormValidator from "../components/FormValidator.js";
 import UserInfo from "../components/UserInfo.js";
 import Api from "../components/Api.js";
@@ -102,12 +103,26 @@ const editAvatarPopup = new PopupWithForm(
 // const deletePopup = new Popup('#deletePopup');
 
 
-const deletePopup = new PopupWithForm(
+// const deletePopup = new PopupWithForm(
+//   {
+//     popupSelector: '#deletePopup',
+//     formSelector: '#deleteForm',
+//     formInputSelector: null,
+//     submitFormFunction: (id) => { //todo
+//       api.deleteCard(id)
+//         .then(res => {
+//           console.log('удалено' + res);
+//         })
+//         .catch(err => console.log(err));
+//     }
+//   });
+
+
+const confirmPopup = new PopupConfirm(
   {
-    popupSelector: '#deletePopup',
-    formSelector: '#deleteForm',
-    formInputSelector: null,
-    submitFormFunction: (id) => { //todo
+    popupSelector: '#confirmPopup',
+    buttonSelector: '.form__submit-button',
+    confirmFunction: (id) => { //todo
       api.deleteCard(id)
         .then(res => {
           console.log('удалено' + res);
@@ -137,7 +152,8 @@ api.getInitialCards()
               popImg.open(e);
             },
             handleCardDeleteClick: (id) => {
-              deletePopup.open();//todo
+              // deletePopup.open();//todo
+              confirmPopup.open(id);
             },
             handleLikeSetClick: (id, isLiked) => {
               api.likeCard(id, isLiked)
@@ -160,7 +176,8 @@ editAvatarPopup.setEvents();
 popImg.setEvents();
 editPopup.setEvents();
 addPopup.setEvents();
-deletePopup.setEvents();
+confirmPopup.setEvents();
+// deletePopup.setEvents();
 // deletePopup.setButtonEvent();
 popupEditButton.addEventListener('click', () => {
   userInfo.setUserInfoToForm(userInfo.getUserInfo());
