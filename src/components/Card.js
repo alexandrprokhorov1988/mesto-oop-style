@@ -1,5 +1,5 @@
 export default class Card {
-  constructor({cardSelectorsObj, cardItemObj, handleCardClick, handleCardDeleteClick,  handleLikeSetClick}) {
+  constructor({cardSelectorsObj, cardItemObj, handleCardClick, handleCardDeleteClick, handleLikeSetClick}) {
     this._card = cardSelectorsObj.cardSelector;
     this._cardTitleClass = cardSelectorsObj.cardTitleClass;
     this._cardImgClass = cardSelectorsObj.cardImgClass;
@@ -25,14 +25,17 @@ export default class Card {
     return cardTemplate.cloneNode(true);
   };
 
+
+
   _deleteEvent(event) {
-    // console.log(event);
-    // const id = event.target.closest(`.${this._card}`).querySelector('.card__img').dataset.id;
     console.log(this._id);
-    this._handleCardDeleteClick(this._id);
+    this._handleCardDeleteClick(this._id, event);
+    console.log('if handle click');
     event.target.closest(`.${this._card}`).remove();
     this._card = null;
   };
+
+
 
   _likeEvent(event) {
     if (event.target.classList.contains(`${this._cardLikeActiveClass}`)) {

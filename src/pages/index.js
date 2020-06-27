@@ -125,7 +125,7 @@ const confirmPopup = new PopupConfirm(
     confirmFunction: (id) => { //todo
       api.deleteCard(id)
         .then(res => {
-          console.log('удалено' + res);
+          console.log(res);
         })
         .catch(err => console.log(err));
     }
@@ -151,9 +151,9 @@ api.getInitialCards()
             handleCardClick: (e) => {
               popImg.open(e);
             },
-            handleCardDeleteClick: (id) => {
+            handleCardDeleteClick: (id, e) => {
               // deletePopup.open();//todo
-              confirmPopup.open(id);
+              confirmPopup.open(id, e);
             },
             handleLikeSetClick: (id, isLiked) => {
               api.likeCard(id, isLiked)

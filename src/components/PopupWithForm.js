@@ -33,7 +33,6 @@ export default class PopupWithForm extends Popup {
     super.close();
   }
 
-
   popupButtonLoadingText(isLoading) {
     if (isLoading) {
       this._element.querySelector('.form__submit-button').value = 'Сохранение...';

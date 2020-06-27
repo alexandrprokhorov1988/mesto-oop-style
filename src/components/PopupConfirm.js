@@ -19,14 +19,7 @@ export default class PopupConfirm extends Popup {
 
   open(id) {
     this._id = id;
-  super.open();
-    return new Promise ((resolve, reject) => {
-
-    });
-
+    super.open();
   }
 
-  confirm(){
-
-  }
 }

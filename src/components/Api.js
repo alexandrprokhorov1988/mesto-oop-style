@@ -79,13 +79,10 @@ export default class Api {
         authorization: this._autorization,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        _id: cardId
-      })
     })
       .then(res => {
         if (res.ok) {
-          console.log(`Карточка с id: ${cardId} удалена`);
+          return (`Карточка с id: ${cardId} удалена`);
         }
         return Promise.reject(`Ошибка: ${res.status}`);
       })
