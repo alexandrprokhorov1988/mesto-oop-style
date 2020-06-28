@@ -179,6 +179,5 @@ popupAvatarEditButton.addEventListener('click', () => {
   editAvatarPopup.open();
 });
 
-
 runValidation(validation);
 
