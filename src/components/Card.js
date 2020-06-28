@@ -17,7 +17,7 @@ export default class Card {
     this._handleLikeSetClick = handleLikeSetClick;
     this._handleCardDeleteClick = handleCardDeleteClick;
     this._userId = document.querySelector(`.${cardSelectorsObj.userIdSelector}`).id;
-    this._ownerLike = cardItemObj.likes.some(e => e._id === this._userId);
+    this._ownerLike = cardItemObj.likes.some((e) => e._id === this._userId);
 
   }
 

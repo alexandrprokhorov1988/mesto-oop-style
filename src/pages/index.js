@@ -129,6 +129,7 @@ api.getUserInfo()
   .then(() => {
     api.getInitialCards()
       .then((result) => {
+        result.reverse();
         const defaultCardList = new Section({
           itemsObj: result,
           rendererFunction: (cardItemObj) => {

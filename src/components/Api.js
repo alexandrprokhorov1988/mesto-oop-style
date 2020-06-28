@@ -72,7 +72,6 @@ export default class Api {
   }
 
   deleteCard(cardId) {
-    console.log(cardId);
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
       headers: {
@@ -107,7 +106,6 @@ export default class Api {
     })
       .then(res => {
         if (res.ok) {
-          console.log(`Карточка с id: ${cardId}`);
           return res.json();
         }
         return Promise.reject(`Ошибка: ${res.status}`);

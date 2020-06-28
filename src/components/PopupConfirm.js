@@ -7,6 +7,14 @@ export default class PopupConfirm extends Popup {
     this._confirmFunction = confirmFunction;
   }
 
+  setId(id) {
+    this._id = id;
+  }
+
+  setCard(card) {
+    this._card = card;
+  }
+
   _setEventListeners() {
     super._setEventListeners();
     this._button.addEventListener('click', (event) => {
@@ -17,13 +25,4 @@ export default class PopupConfirm extends Popup {
       this.close();
     });
   };
-
-
-  setId(id) {
-    this._id = id;
-  }
-
-  setCard(card) {
-    this._card = card;
-  }
 }
