@@ -19,11 +19,11 @@ export default class PopupConfirm extends Popup {
   };
 
 
-  set setId(id) {
+  setId(id) {
     this._id = id;
   }
 
-  set setCard(card) {
+  setCard(card) {
     this._card = card;
   }
 }
