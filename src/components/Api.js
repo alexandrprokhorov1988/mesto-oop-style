@@ -76,7 +76,6 @@ export default class Api {
       method: 'DELETE',
       headers: {
         authorization: this._autorization,
-        'Content-Type': 'application/json'
       },
     })
       .then(res => {
