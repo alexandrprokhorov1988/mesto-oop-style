@@ -4,6 +4,7 @@
 * Описание
 * Инструкция
 * Технологии
+* Примечания
 
 #### Описание
 * [Ссылка на макет в Figma (спринт 4)](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
@@ -30,3 +31,15 @@
 * Webpack
 * Fetch
 * Promise
+
+#### Примечания
+  Для сборки проекта командой "npm run build" в package.json.
+ 
+  Linux 
+  ```sh
+  "rm -rf dist && webpack"
+  ```
+  Windows 
+  ```sh
+  "rd /s /q dist && webpack"
+```

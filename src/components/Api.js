@@ -43,7 +43,8 @@ export default class Api {
         name: name,
         about: about
       })
-    }).then(res => {
+    })
+      .then(res => {
       if (res.ok) {
         return res.json();
       }
@@ -121,7 +122,8 @@ export default class Api {
       body: JSON.stringify({
         avatar: avatarUrl
       })
-    }).then(res => {
+    })
+      .then(res => {
       if (res.ok) {
         return res.json();
       }

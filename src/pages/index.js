@@ -39,6 +39,7 @@ const editPopup = new PopupWithForm(
       api.setUserInfo(userObj)
         .then(res => {
           userInfo.setUserInfo(res);
+          editPopup.close();
         })
         .catch(err => console.log(err))
         .finally(() => editPopup.popupButtonLoadingText(false));
@@ -81,6 +82,7 @@ const addPopup = new PopupWithForm(
             }
           }, sectionElement);
           item.renderer();
+          addPopup.close();
         })
         .catch(err => console.log(err))
         .finally(() => addPopup.popupButtonLoadingText(false));
@@ -96,6 +98,7 @@ const editAvatarPopup = new PopupWithForm(
       api.setUserAvatar(itemObj)
         .then(res => {
           userInfo.setUserInfo(res);
+          editAvatarPopup.close();
         })
         .catch(err => console.log(err))
         .finally(() => editAvatarPopup.popupButtonLoadingText(false));
@@ -180,4 +183,3 @@ popupAvatarEditButton.addEventListener('click', () => {
 });
 
 runValidation(validation);
-
