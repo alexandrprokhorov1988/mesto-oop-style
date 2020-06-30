@@ -19,10 +19,16 @@ export default class PopupConfirm extends Popup {
     super._setEventListeners();
     this._button.addEventListener('click', (event) => {
       event.preventDefault();
+      this._button.disabled = true;
       this._confirmFunction(this._id);
       document.querySelector(`[data-id=\"${this._id}\"]`).closest(`.${this._card}`).remove();
       this._card = null;
       this.close();
     });
   };
+
+  open(){
+    this._button.disabled = false;
+    super.open();
+  }
 }

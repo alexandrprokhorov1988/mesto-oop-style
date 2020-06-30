@@ -6,7 +6,7 @@ export default class PopupWithForm extends Popup {
     this._element = document.querySelector(`${formSelector}`);
     this._formSubmitFunction = submitFormFunction;
     this._formInputSelector = formInputSelector;
-    this._oldValue = this._element.querySelector('.form__submit-button').value;
+    this._button = this._element.querySelector('.form__submit-button');
   }
 
   _getInputValues() {
@@ -22,6 +22,7 @@ export default class PopupWithForm extends Popup {
     super._setEventListeners();
     this._element.addEventListener('submit', (event) => {
       event.preventDefault();
+      this._button.disabled = true;
       this.popupButtonLoadingText(true);
       this._formSubmitFunction(this._getInputValues());
     });
@@ -33,10 +34,11 @@ export default class PopupWithForm extends Popup {
   }
 
   popupButtonLoadingText(isLoading) {
+    this._newButton = this._element.querySelector('.form__submit-button');
     if (isLoading) {
-      this._element.querySelector('.form__submit-button').value = 'Сохранение...';
+      this._newButton.value = 'Сохранение...';
     } else {
-      this._element.querySelector('.form__submit-button').value = this._oldValue;
+      this._newButton.value = this._button.value;
     }
   }
 }

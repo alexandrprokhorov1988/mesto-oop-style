@@ -114,7 +114,7 @@ const confirmPopup = new PopupConfirm(
         .then(res => {
           console.log(res);
         })
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
     }
   });
 
@@ -125,44 +125,38 @@ const runValidation = ({formSelector}) => {
   });
 };
 
-api.getUserInfo()
-  .then((res) => {
-    userInfo.setUserInfo(res);
-  })
-  .then(() => {
-    api.getInitialCards()
-      .then((result) => {
-        result.reverse();
-        const defaultCardList = new Section({
-          itemsObj: result,
-          rendererFunction: (cardItemObj) => {
-            const card = new Card(
-              {
-                cardSelectorsObj: cardSelectorsObj,
-                cardItemObj: cardItemObj,
-                handleCardClick: (e) => {
-                  popImg.open(e);
-                },
-                handleCardDeleteClick: (id, card) => {
-                  confirmPopup.setId(id);
-                  confirmPopup.setCard(card);
-                  confirmPopup.open();
-                },
-                handleLikeSetClick: (id, isLiked) => {
-                  api.likeCard(id, isLiked)
-                    .then(res => {
-                      card.setLikes(res);
-                    })
-                    .catch(err => console.log(err));
-                },
-              });
-            const cardElement = card.generateCard();
-            defaultCardList.addItem(cardElement);
-          }
-        }, sectionElement);
-        defaultCardList.renderer();
-      })
-      .catch((err) => console.log(err));
+Promise.all([api.getUserInfo(), api.getInitialCards()])
+  .then(([user, card]) => {
+    userInfo.setUserInfo(user);
+    card.reverse();
+    const defaultCardList = new Section({
+      itemsObj: card,
+      rendererFunction: (cardItemObj) => {
+        const card = new Card(
+          {
+            cardSelectorsObj: cardSelectorsObj,
+            cardItemObj: cardItemObj,
+            handleCardClick: (e) => {
+              popImg.open(e);
+            },
+            handleCardDeleteClick: (id, card) => {
+              confirmPopup.setId(id);
+              confirmPopup.setCard(card);
+              confirmPopup.open();
+            },
+            handleLikeSetClick: (id, isLiked) => {
+              api.likeCard(id, isLiked)
+                .then(res => {
+                  card.setLikes(res);
+                })
+                .catch(err => console.log(err));
+            },
+          });
+        const cardElement = card.generateCard();
+        defaultCardList.addItem(cardElement);
+      }
+    }, sectionElement);
+    defaultCardList.renderer();
   })
   .catch((err) => console.log(err));
 
