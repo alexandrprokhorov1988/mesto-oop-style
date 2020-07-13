@@ -3,6 +3,7 @@ import Popup from "./Popup.js";
 export default class PopupWithImage extends Popup {
   constructor({cardClass, cardTitleClass, popupSelector, cardImgClass, popupImg, popupTitle}) {
     super(popupSelector);
+    super._setEventListeners();
     this._cardClass = cardClass;
     this._cardImgClass = cardImgClass;
     this._cardTitleClass = cardTitleClass;

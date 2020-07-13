@@ -160,11 +160,6 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
   })
   .catch((err) => console.log(err));
 
-editAvatarPopup.setEvents();
-popImg.setEvents();
-editPopup.setEvents();
-addPopup.setEvents();
-confirmPopup.setEvents();
 popupEditButton.addEventListener('click', () => {
   userInfo.setUserInfoToForm(userInfo.getUserInfo());
   editPopup.open();

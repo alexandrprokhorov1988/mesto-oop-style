@@ -8,7 +8,7 @@ export default class PopupWithForm extends Popup {
     this._formInputSelector = formInputSelector;
     this._button = this._element.querySelector('.form__submit-button');
     this._buttonOldValue = this._button.value;
-
+    this._setEventListeners();
   }
 
   _getInputValues() {

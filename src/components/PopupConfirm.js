@@ -5,6 +5,7 @@ export default class PopupConfirm extends Popup {
     super(popupSelector);
     this._button = this._popup.querySelector(`${buttonSelector}`);
     this._confirmFunction = confirmFunction;
+    this._setEventListeners();
   }
 
   setId(id) {

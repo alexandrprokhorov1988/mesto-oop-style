@@ -40,8 +40,4 @@ export default class Popup {
       this._iconCloseEvent(event);
     });
   }
-
-  setEvents() {
-    this._setEventListeners();
-  };
 }
